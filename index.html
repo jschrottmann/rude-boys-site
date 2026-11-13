@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rude Boys Hospitality v2</title>
+<title>Rude Boys Hospitality v3</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -464,6 +464,48 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 @media (max-width:640px){
   .ns.four,.fcols{grid-template-columns:minmax(0,1fr)}
 }
+
+/* ---------- v3: the sale ---------- */
+.audit{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:var(--col-gap);align-items:start}
+.audit-parts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap)}
+.audit-parts article{border-top:6px solid var(--ink);padding-top:14px;display:grid;gap:10px}
+.audit-parts h3{font-size:clamp(28px,3vw,40px)}
+.audit-parts p{font-size:17px}
+.audit-time{grid-column:1 / -1;font:400 15px/1.5 var(--mono);border-top:1px solid var(--ink);padding-top:12px}
+.audit-price{background:var(--ink);color:var(--on-ink);padding:24px;display:grid;gap:12px;box-shadow:10px 10px 0 var(--red)}
+.audit-price .price{font:900 clamp(48px,6vw,72px)/1 var(--display);color:var(--paper)}
+.audit-price p{font-size:16px}
+.audit-price .scarce{font:400 14px/1.4 var(--mono);color:var(--on-ink-dim)}
+.audit-price .btn{justify-self:start}
+.offers.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.serve .backlink{justify-self:start;margin-top:4px}
+.workgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:3px solid var(--ink)}
+.workcard{display:grid;gap:6px;align-content:start;padding:18px clamp(12px,1.6vw,20px) 22px;border-bottom:1px solid var(--ink);border-left:1px solid var(--ink)}
+.workcard:nth-child(3n+1){border-left:0;padding-left:0}
+.workcard h3{font-size:clamp(24px,2.4vw,30px)}
+.workcard p{font-size:16px}
+.bigidea{font:800 clamp(28px,3vw,40px)/1.05 var(--display);text-transform:uppercase;color:var(--paper)}
+.faq{display:grid;border-top:3px solid var(--ink);max-width:880px}
+.faq details{border-bottom:1px solid var(--ink)}
+.faq summary{cursor:pointer;list-style:none;padding-block:18px;font:800 clamp(22px,2.2vw,28px)/1.1 var(--display);text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:" +";color:var(--red)}
+.faq details[open] summary::after{content:" \2212"}
+.faq details p{font-size:18px;padding-bottom:18px;max-width:60ch}
+#apply .deck{color:var(--on-ink)}
+#apply h2{color:var(--paper)}
+#apply .mailbox{color:var(--ink)}
+@media (max-width:900px){
+  .audit,.offers.three{grid-template-columns:minmax(0,1fr)}
+  .workgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .workcard:nth-child(3n+1){border-left:1px solid var(--ink);padding-left:clamp(12px,1.6vw,20px)}
+  .workcard:nth-child(odd){border-left:0;padding-left:0}
+}
+@media (max-width:640px){
+  .audit-parts,.workgrid{grid-template-columns:minmax(0,1fr)}
+  .workcard{border-left:0!important;padding-left:0!important}
+  .audit-price{box-shadow:6px 6px 0 var(--red)}
+}
 </style>
 </head>
 <body>
@@ -485,8 +527,8 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 <div class="draft"><div class="wrap"><b class="mono">Preview</b><span>Not public. Photos are placeholders until the shoot.</span></div></div>
 
 <header class="topnav"><div class="wrap"><a class="mark" href="#top">RUDE BOYS</a>
-  <nav aria-label="Sections"><a href="#northstar">Method</a><a href="#services">Services</a><a href="#crew">Partners</a><a href="#field-notes">Field notes</a></nav>
-  <a class="cta" href="#contact">Bring us the job</a>
+  <nav aria-label="Sections"><a href="#audit">The audit</a><a href="#steps">How it works</a><a href="#work">Work</a><a href="#crew">Partners</a></nav>
+  <a class="cta" href="#apply">Apply for the audit</a>
 </div></header>
 
 <main>
@@ -498,9 +540,9 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
           <rect x="20" y="144" width="600" height="5" style="fill:var(--red)"/>
           <text x="320" y="218" text-anchor="middle" font-size="70" font-weight="700" textLength="600" lengthAdjust="spacing">HOSPITALITY</text>
         </svg>
-    <h1>Rude to the rules. Good to the guest.</h1>
-    <p class="deck">We run our own venues, so our advice comes from service, not slides.</p>
-    <div class="acts"><a class="btn red" href="#contact">Bring us the job</a><a class="btn ghost" href="#northstar">See the method</a></div>
+    <h1>Build it right the first time.</h1>
+    <p class="deck">In 21 days you know what to build, what it costs and whether it works.</p>
+    <div class="acts"><a class="btn red" href="#apply">Apply for the audit</a><a class="btn ghost" href="#steps">How it works</a></div>
   </div>
 </section>
 
@@ -511,16 +553,110 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       <h2>An island is not a city.</h2>
       <p>Crowds, construction, hiring and branding all work differently offshore. Build with a city playbook and it shows: the wrong crowd, a team that leaves, a brand nobody remembers.</p>
       <p>We build on the Philippine islands because we run venues there.</p>
+      <p><b>The audit finds those costs before you pay them.</b></p>
     </div>
   </div>
 </section>
 
-<section class="band" id="who">
+<section class="band" id="proof">
   <div class="wrap who">
-    <h2>Who we are</h2>
+    <h2>We run our own.</h2>
     <div>
-      <p class="big">Operators first. We run The Rōnin and Wild in Siargao, and we build hotels, restaurants and spas for owners who want it done properly. We only take projects we believe in, so we never take on someone else’s headache.</p>
+      <p class="big">We opened Wild in Siargao in October 2023. In 2024 it hosted 9 events, ran 6 catering jobs and was written up by Tatler Dining, FEATR and ExptravelPH. We have also run Bayani Siargao, and Jove ran Mandala to two World Travel Awards.</p>
       <a class="backlink" href="#crew">Meet the partners</a>
+    </div>
+  </div>
+</section>
+
+<section class="band sheet" id="audit">
+  <div class="wrap">
+    <div class="sec-head"><h2>The 21-Day Island Audit</h2><p>Two things you need before you spend on a build, done in 21 days.</p></div>
+    <div class="audit">
+      <div class="audit-parts">
+        <article><h3>Northstar workshop</h3><p>Half a day with you and your team leads. You leave with one document everyone can act on.</p></article>
+        <article><h3>Feasibility snapshot</h3><p>Market, concept fit and a budget check, in a short document you can share with partners.</p></article>
+        <p class="audit-time">Workshop in week 1. Snapshot by day 21.</p>
+      </div>
+      <aside class="audit-price">
+        <p class="price">₱150,000</p>
+        <p>Credited in full if you start a build with us within 30 days.</p>
+        <p class="scarce">We take two audits a month.</p>
+        <a class="btn red" href="#apply">Apply for the audit</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="steps">
+  <div class="wrap">
+    <div class="sec-head"><h2>From audit to opening night</h2></div>
+    <div class="offers three">
+      <article class="offer">
+        <h3>Audit</h3>
+        <p>21 days. Know what to build and what it costs.</p>
+        <a class="backlink" href="#audit">The 21-Day Island Audit</a>
+      </article>
+      <article class="offer">
+        <h3>Build</h3>
+        <p>For independent owners and investors. Development advice from the first site visit to opening night.</p>
+        <div class="phases">
+      <div class="phase"><h3>Feasibility and contracting</h3><ul class="bul">
+        <li>Site evaluation and proposed layout</li><li>Market study, concept study and investment appraisal</li><li>Budget development</li><li>Support for your finance specialist during fundraising</li><li>Operator selection and management contract negotiation</li></ul></div>
+      <div class="phase"><h3>Design and planning</h3><ul class="bul">
+        <li>Design brief, design review, technical services</li><li>Engineering and sustainability advice</li><li>Branding, brand standards and design guidelines</li><li>Interior, restaurant, kitchen and spa design management</li><li>Food and beverage concepts and planning</li></ul></div>
+      <div class="phase"><h3>Construction and pre-opening</h3><ul class="bul">
+        <li>Organisation design, recruitment and training</li><li>Standard operating procedures and manuals</li><li>Technology and systems: PMS, POS, CRM, telecoms, guest systems, AV</li><li>Sales, marketing and distribution: website, e-channels, first agency accounts</li></ul></div>
+    </div>
+
+        <details class="svc-more"><summary>Technical and pre-opening services, in full</summary>
+    <div class="more-svc">
+      <div><h3>Technical services</h3><ul class="bul">
+        <li>Budgets</li><li>Design review</li><li>Programme</li><li>Package pricing and contract sum</li><li>Construction and fit-out site meetings</li><li>IT and systems</li><li>Conflict resolution</li><li>Monthly owner report</li></ul></div>
+      <div><h3>Pre-opening services</h3><ul class="bul">
+        <li>Pre-opening plan, budget and timetable</li><li>SOPs, job specs, recruitment and training</li><li>Sales plan and pricing</li><li>Distribution and website</li><li>Launch, PR and social</li><li>Accounting, purchasing and reporting</li><li>Licences, banking and insurance</li><li>Supply chain and mystery shopping</li></ul></div>
+    </div>
+    </details>
+      </article>
+      <article class="offer">
+        <h3>Run</h3>
+        <p>We manage and run the venue, or stand beside your team until it stabilises.</p>
+        <ul class="bul">
+          <li>Organisation design, recruitment and training</li>
+          <li>Standard operating procedures and manuals</li>
+          <li>Sales, pricing and distribution</li>
+          <li>Accounting, purchasing and reporting</li>
+          <li>A Northstar workshop for the whole team</li>
+          <li>Launch, then management support until the business stabilises</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band sheet" id="receive">
+  <div class="wrap">
+    <div class="sec-head"><h2>What you take home</h2><p>Plain documents for owners. Numbers first, one idea a page, an owner and a date on every action.</p></div>
+    <div class="receive">
+      <figure class="sheetdoc" aria-label="Sample proposal front page, placeholder copy">
+        <svg class="wordmark" viewBox="0 0 640 230" role="img" aria-label="Rude Boys Hospitality">
+          <text x="320" y="128" text-anchor="middle" font-size="150" font-weight="900" textLength="600" lengthAdjust="spacingAndGlyphs">RUDE BOYS</text>
+          <rect x="20" y="144" width="600" height="5" style="fill:var(--red)"/>
+          <text x="320" y="218" text-anchor="middle" font-size="70" font-weight="700" textLength="600" lengthAdjust="spacing">HOSPITALITY</text>
+        </svg>
+        <div class="dateline"><span>Philippines</span><span>[Date]</span><span>Proposal for [Client name]</span></div>
+                <h3>Northstar review and opening plan</h3>
+        <p class="deckline">What we found, what it costs, and who does what by when.</p>
+        <div class="grid3">
+          <div class="ph" aria-hidden="true"></div>
+          <p>We run our own venues. Our advice comes from service, not slides. Say the number. If there is a figure, use it.</p>
+          <div class="box"><b>The numbers</b><span>Food cost<i>[00]%</i></span><span>Target<i>[00]%</i></span><span>Due<i>[Date]</i></span><span>Owner<i>[Name]</i></span></div>
+        </div>
+        <figcaption class="stamp">Sample front page. Placeholder copy, not a real client.</figcaption>
+      </figure>
+      <div class="deliver">
+        <div><div><b>Feasibility study</b><p>Market study (supply and demand), concept study (design and operations) and investment appraisal (investment and returns).</p></div></div>
+        <div><div><b>Your Northstar</b><p>The workshop output, written up as the team’s one living document.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -542,86 +678,22 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   </div>
 </section>
 
-<section class="band sheet" id="services">
-  <div class="wrap">
-    <div class="sec-head"><h2>Two ways to work with us</h2><p>Hotel, restaurant and spa concepts, from idea to opening. Then, if you want, we run it.</p></div>
-    <div class="offers">
-      <article class="offer">
-        <h3>Consult</h3>
-        <p>For independent owners and investors. Development advice from the first site visit to opening night.</p>
-        <div class="phases">
-      <div class="phase"><h3>Feasibility and contracting</h3><ul class="bul">
-        <li>Site evaluation and proposed layout</li><li>Market study, concept study and investment appraisal</li><li>Budget development</li><li>Support for your finance specialist during fundraising</li><li>Operator selection and management contract negotiation</li></ul></div>
-      <div class="phase"><h3>Design and planning</h3><ul class="bul">
-        <li>Design brief, design review, technical services</li><li>Engineering and sustainability advice</li><li>Branding, brand standards and design guidelines</li><li>Interior, restaurant, kitchen and spa design management</li><li>Food and beverage concepts and planning</li></ul></div>
-      <div class="phase"><h3>Construction and pre-opening</h3><ul class="bul">
-        <li>Organisation design, recruitment and training</li><li>Standard operating procedures and manuals</li><li>Technology and systems: PMS, POS, CRM, telecoms, guest systems, AV</li><li>Sales, marketing and distribution: website, e-channels, first agency accounts</li></ul></div>
-    </div>
-
-        <details class="svc-more"><summary>Technical and pre-opening services, in full</summary>
-    <div class="more-svc">
-      <div><h3>Technical services</h3><ul class="bul">
-        <li>Budgets</li><li>Design review</li><li>Programme</li><li>Package pricing and contract sum</li><li>Construction and fit-out site meetings</li><li>IT and systems</li><li>Conflict resolution</li><li>Monthly owner report</li></ul></div>
-      <div><h3>Pre-opening services</h3><ul class="bul">
-        <li>Pre-opening plan, budget and timetable</li><li>SOPs, job specs, recruitment and training</li><li>Sales plan and pricing</li><li>Distribution and website</li><li>Launch, PR and social</li><li>Accounting, purchasing and reporting</li><li>Licences, banking and insurance</li><li>Supply chain and mystery shopping</li></ul></div>
-    </div>
-    </details>
-      </article>
-      <article class="offer">
-        <h3>Operate</h3>
-        <p>We manage and run venues, starting with our own. First-time founders get walked through their first opening, start to finish.</p>
-        <ul class="bul">
-          <li>Organisation design, recruitment and training</li>
-          <li>Standard operating procedures and manuals</li>
-          <li>Sales, pricing and distribution</li>
-          <li>Accounting, purchasing and reporting</li>
-          <li>A Northstar workshop for the whole team</li>
-          <li>Launch, then management support until the business stabilises</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="band sheet" id="receive">
-  <div class="wrap">
-    <div class="sec-head"><h2>What you receive</h2><p>Plain documents for owners. Numbers first, one idea a page, an owner and a date on every action.</p></div>
-    <div class="receive">
-      <figure class="sheetdoc" aria-label="Sample proposal front page, placeholder copy">
-        <svg class="wordmark" viewBox="0 0 640 230" role="img" aria-label="Rude Boys Hospitality">
-          <text x="320" y="128" text-anchor="middle" font-size="150" font-weight="900" textLength="600" lengthAdjust="spacingAndGlyphs">RUDE BOYS</text>
-          <rect x="20" y="144" width="600" height="5" style="fill:var(--red)"/>
-          <text x="320" y="218" text-anchor="middle" font-size="70" font-weight="700" textLength="600" lengthAdjust="spacing">HOSPITALITY</text>
-        </svg>
-        <div class="dateline"><span>Philippines</span><span>[Date]</span><span>Proposal for [Client name]</span></div>
-                <h3>Northstar review and opening plan</h3>
-        <p class="deckline">What we found, what it costs, and who does what by when.</p>
-        <div class="grid3">
-          <div class="ph" aria-hidden="true"></div>
-          <p>We run our own venues. Our advice comes from service, not slides. Say the number. If there is a figure, use it.</p>
-          <div class="box"><b>The numbers</b><span>Food cost<i>[00]%</i></span><span>Target<i>[00]%</i></span><span>Due<i>[Date]</i></span><span>Owner<i>[Name]</i></span></div>
-        </div>
-        <figcaption class="stamp">Sample front page. Placeholder copy, not a real client.</figcaption>
-      </figure>
-      <div class="deliver">
-        <div><div><b>Feasibility study</b><p>Market study (supply and demand), concept study (design and operations) and investment appraisal (investment and returns).</p></div></div>
-        <div><div><b>Your Northstar</b><p>The workshop output, written up as the team’s one living document.</p></div></div>
-        <div><div><b>Manuals and SOPs</b><p>Standard operating procedures, job specifications and the training plan.</p></div></div>
-        <div><div><b>Monthly owner report</b><p>Programme, progress, budgets, costs, problems and risks, one brief report a month through the build.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="band" id="serve">
   <div class="wrap">
     <div class="sec-head"><h2>Who we build for</h2></div>
     <div class="serve">
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Hotels and resorts</h3><p>Feasibility, operator selection, pre-opening and the team that runs it.</p></article>
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Restaurants, bars and clubs</h3><p>Concept, menu, kitchen design and the crew on the pass.</p></article>
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Spas and wellness</h3><p>Spa design management and the standards that hold after opening.</p></article>
+      <article><div class="vph"><span>Photo to shoot</span></div><h3>Hotels and resorts</h3><p>Feasibility, operator selection, pre-opening and the team that runs it.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
+      <article><div class="vph"><span>Photo to shoot</span></div><h3>Restaurants, bars and clubs</h3><p>Concept, menu, kitchen design and the crew on the pass.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
+      <article><div class="vph"><span>Photo to shoot</span></div><h3>Spas and wellness</h3><p>Spa design management and the standards that hold after opening.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
     </div>
     <p class="serve-foot">Opening your first venue? We guide first-time founders through all of it.</p>
+  </div>
+</section>
+
+<section class="band sheet" id="work">
+  <div class="wrap">
+    <div class="sec-head"><h2>Work we&rsquo;ve done</h2></div>
+    <div class="workgrid"><article class="workcard"><h3>Wild</h3><span class="by">Siargao. Our own restaurant</span><p>Opened October 2023. 9 events, 6 catering jobs and 3 press features in 2024.</p></article><article class="workcard"><h3>Bayani Siargao</h3><span class="by">Siargao</span><p>Restaurant operations and management.</p></article><article class="workcard"><h3>Banay Bakery and Cafe</h3><span class="by">Siargao</span><p>Consultancy, concept to timeline.</p></article><article class="workcard"><h3>Lola’s</h3><p>Five-year projections study.</p></article><article class="workcard"><h3>Fridays Boracay</h3><span class="by">Boracay</span><p>Specialty restaurant layout.</p></article><article class="workcard"><h3>Siargao Food and Wine Festival</h3><span class="by">Siargao</span><p>Founded and directed by Andrew.</p></article></div>
   </div>
 </section>
 
@@ -632,6 +704,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       <svg viewBox="0 0 200 200" class="seal" role="img" aria-label="RB seal"><use href="#sealArt"/></svg>
     </div>
     <div class="body">
+      <p class="bigidea">Rude to the rules. Good to the guest.</p>
       <p>We started as a consulting and management firm called Nice Guys.</p>
       <p>After a few projects we learned that people don’t respect nice. Owners nodded, then did it the old way. So we formed a new company and gave it a name that says what we do.</p>
       <p>Rude to vanity metrics, tenure-based promotion, copy-paste concepts and fluff. Never rude to guests, teams, partners or local culture.</p>
@@ -968,21 +1041,18 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   </div>
 </section>
 
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><h2>Questions owners ask</h2></div>
+    <div class="faq"><details><summary>₱150,000 just to plan?</summary><p>It comes back in full as credit if you build with us within 30 days.</p></details><details><summary>We already have an operator.</summary><p>Good. We work for owners or operators, and we help select and negotiate the management contract.</p></details><details><summary>Our site isn’t in Siargao.</summary><p>We build across the Philippine islands. The method travels; the island know-how is why owners call us.</p></details><details><summary>What happens after the audit?</summary><p>You decide. Build with us and the fee is credited, or take the plan and run.</p></details><details><summary>Why only two a month?</summary><p>We also run The Rōnin and Wild. We take what we can do properly.</p></details></div>
+  </div>
+</section>
+
 <section class="band" id="writing">
   <div class="wrap">
     <div class="sec-head"><h2>Field notes</h2><p>Written between services. Proposed issues, not yet written.</p></div>
     <div class="issues"><article class="issue lead" data-topic="story"><h3>Why we stopped being nice</h3><span class="meta"><b>No. 01</b><span>Story</span><span class="dchip">To write</span></span><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></article></div>
     <p class="teaser-foot"><a class="backlink" href="#field-notes">All field notes</a></p>
-  </div>
-</section>
-
-<section class="band sheet" id="workshop">
-  <div class="wrap workshop">
-    <div>
-      <h2>Start with a Northstar workshop</h2>
-      <p>Owners and team leads in one room. You leave with one document the whole team can act on.</p>
-    </div>
-    <a class="btn" href="mailto:jove@rudeboyshospitality.com?subject=Northstar%20workshop">Book a workshop</a>
   </div>
 </section>
 
@@ -1006,17 +1076,18 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   </div>
 </section>
 
-<section class="band ink" id="contact">
+<section class="band ink" id="apply">
   <div class="wrap contact">
     <div>
-      <h2>Bring us the land, the money or the idea.</h2>
-      <p class="deck">We only take projects we believe in, so we never take on someone else’s headache.</p>
+      <h2>Two audits a month. Apply for yours.</h2>
+      <p class="deck">Five questions. If it&rsquo;s a fit, we call you within two working days.</p>
     </div>
     <div class="mailbox">
-      <span class="k">Write to the partners</span>
+      <span class="k">The five questions</span>
+      <ol><li>Land, an existing venue, or an idea?</li><li>Where is it (island and town)?</li><li>Build budget: under ₱10M, ₱10M to ₱50M, over ₱50M, or not sure yet?</li><li>When do you want to open?</li><li>Your name, email and WhatsApp number</li></ol>
+      <div class="row"><a class="btn" href="mailto:jove@rudeboyshospitality.com?subject=21-Day%20Island%20Audit%20application&amp;body=1.%20Land%2C%20an%20existing%20venue%2C%20or%20an%20idea%3F%0A2.%20Where%20is%20it%20(island%20and%20town)%3F%0A3.%20Build%20budget%3A%20under%20%E2%82%B110M%2C%20%E2%82%B110M%20to%20%E2%82%B150M%2C%20over%20%E2%82%B150M%2C%20or%20not%20sure%20yet%3F%0A4.%20When%20do%20you%20want%20to%20open%3F%0A5.%20Your%20name%2C%20email%20and%20WhatsApp%20number%3A%0A">Apply for the audit</a><button class="btn ghost" type="button" id="copy">Copy address</button></div>
+      <span class="k">or write to</span>
       <code id="email">jove@rudeboyshospitality.com</code>
-      <div class="row"><a class="btn" href="mailto:jove@rudeboyshospitality.com?subject=Project%20enquiry">Bring us the job</a><button class="btn ghost" type="button" id="copy">Copy address</button></div>
-      <ol><li>What you have: land, capital, a venue or an idea</li><li>Where it is</li><li>When you want to open</li></ol>
     </div>
   </div>
 </section>
@@ -1043,9 +1114,9 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   <div class="wrap">
     <div class="fcols">
       <div><svg viewBox="0 0 200 200" class="seal" role="img" aria-label="RB seal"><use href="#sealArt"/></svg><p>Rude Boys Hospitality. Operators who build hotels, restaurants and spas on the Philippine islands.</p></div>
-      <div><b>Services</b><ul><li><a href="#services">Feasibility and contracting</a></li><li><a href="#services">Design and planning</a></li><li><a href="#services">Construction and pre-opening</a></li><li><a href="#services">Operations</a></li></ul></div>
+      <div><b>Services</b><ul><li><a href="#steps">Feasibility and contracting</a></li><li><a href="#steps">Design and planning</a></li><li><a href="#steps">Construction and pre-opening</a></li><li><a href="#steps">Operations</a></li></ul></div>
       <div><b>Who we build for</b><ul><li><a href="#serve">Hotels and resorts</a></li><li><a href="#serve">Restaurants, bars and clubs</a></li><li><a href="#serve">Spas and wellness</a></li><li><a href="#serve">First-time founders</a></li></ul></div>
-      <div><b>Company</b><ul><li><a href="#crew">Partners</a></li><li><a href="#northstar">Northstar method</a></li><li><a href="#story">Name story</a></li><li><a href="#field-notes">Field notes</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><b>Company</b><ul><li><a href="#crew">Partners</a></li><li><a href="#northstar">Northstar method</a></li><li><a href="#story">Name story</a></li><li><a href="#field-notes">Field notes</a></li><li><a href="#apply">Apply</a></li></ul></div>
     </div>
     <p class="legal">Rude Boys Consultancy Inc.<br>Philippines<br>Our venues keep their own names, with a small Run by Rude Boys line.</p>
   </div>
