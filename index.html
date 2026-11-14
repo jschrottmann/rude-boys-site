@@ -147,8 +147,7 @@ p{margin:0}
 .fc-mythic{border-color:var(--red)}
 .fc-mythic .fc-bg{position:absolute;inset:-6%;z-index:0;background:var(--ink);transform:translate(calc(var(--px) * -1.6px),calc(var(--py) * 1.6px))}
 .fc-mythic .fc-bg::before,.fc-mythic .fc-bg::after{content:"";position:absolute;inset:0}
-.fc-mythic .fc-bg::before{background:repeating-conic-gradient(from -3deg at 50% 34%,var(--red) 0 5deg,transparent 5deg 13deg);
-  -webkit-mask-image:radial-gradient(circle at 50% 34%,var(--ink) 0 14%,transparent 60%);mask-image:radial-gradient(circle at 50% 34%,var(--ink) 0 14%,transparent 60%)}
+.fc-mythic .fc-bg::before{background:radial-gradient(circle at 50% 34%,var(--red) 0 30%,transparent 30.5%)}
 .fc-mythic .fc-bg::after{background:repeating-linear-gradient(90deg,transparent 0 46px,color-mix(in srgb,var(--paper) 22%,transparent) 46px 47px);
   -webkit-mask-image:linear-gradient(90deg,var(--ink) 0 20%,transparent 32% 68%,var(--ink) 80%);mask-image:linear-gradient(90deg,var(--ink) 0 20%,transparent 32% 68%,var(--ink) 80%)}
 .fc-mythic .fc-pop{position:absolute;left:50%;bottom:26%;height:78%;width:auto;z-index:3;pointer-events:none;transform:translate(calc(-50% + var(--px) * .5px),calc(var(--py) * -.5px))}
@@ -162,9 +161,8 @@ p{margin:0}
 .fc-holo{border-color:var(--red)}
 .fc-holo .fc-art{background:
   repeating-linear-gradient(115deg,transparent 0 7px,color-mix(in srgb,var(--paper) 30%,transparent) 7px 8px),
-  repeating-conic-gradient(from calc(var(--ry) * 3) at 50% 115%,color-mix(in srgb,var(--paper) 20%,transparent) 0 3deg,transparent 3deg 9deg),
   linear-gradient(115deg,var(--red),var(--sheet) 25%,var(--red) 50%,var(--sheet) 75%,var(--red));
-  background-size:auto,auto,300% 100%;background-position:0 0,0 0,var(--gx) 0}
+  background-size:auto,300% 100%;background-position:0 0,var(--gx) 0}
 .fc-holo .fc-art svg{position:relative;z-index:3}
 
 /* Rare (Choi): a printed photo. Paper frame, warm grade, fine halftone, no foil */
@@ -526,7 +524,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 /* standard frame art: burst in the partner colour, halftone, cut-paper figure */
 .fc-rare .fc-art,.fc-holo .fc-art{background:
   radial-gradient(circle,color-mix(in srgb,var(--ink) 16%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
-  repeating-conic-gradient(from -4deg at 50% 62%,var(--id) 0 9deg,transparent 9deg 22.5deg),
+  radial-gradient(circle at 50% 62%,var(--id) 0 34%,transparent 34.5%),
   var(--paper)}
 .fc-holo .fc-art{background-size:7px 7px,auto,auto}
 .fc-holo .fc-art::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--paper) 55%,transparent) 45%,color-mix(in srgb,var(--mustard) 40%,transparent) 52%,transparent 66%);background-size:250% 100%;background-position:var(--gx) 0;mix-blend-mode:screen}
@@ -538,7 +536,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 .fc-mythic .fc-bg{background:
   radial-gradient(circle,color-mix(in srgb,var(--paper) 14%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
   var(--scene)}
-.fc-mythic .fc-bg::before{background:repeating-conic-gradient(from -4deg at 50% 32%,var(--id) 0 9deg,transparent 9deg 22.5deg);-webkit-mask-image:radial-gradient(circle at 50% 32%,var(--ink) 0 30%,transparent 72%);mask-image:radial-gradient(circle at 50% 32%,var(--ink) 0 30%,transparent 72%)}
+.fc-mythic .fc-bg::before{background:radial-gradient(circle at 50% 32%,var(--id) 0 30%,transparent 30.5%)}
 .fc-mythic .fc-bg::after{content:none}
 .fc-mythic .fc-name,.fc-mythic .fc-type{box-shadow:0 3px 0 var(--ink)}
 .fc-mythic .fc-text{background:color-mix(in srgb,var(--ink) 82%,transparent);color:var(--paper);border-color:var(--paper)}
@@ -568,10 +566,23 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 .audit-price .price-burst .price{position:relative;color:var(--ink);font-size:30px;white-space:nowrap}
 .btn:hover{box-shadow:3px 3px 0 var(--mustard)}
 @media (max-width:900px){.hero-boom{display:none}.hero-burst{right:-200px;top:-120px;width:520px;height:520px}}
+
+/* Card portraits (generated set, 760px WebP). Rare: the full image in the art window.
+   Holo Rare: cutout over partner-colour foil that shifts on tilt; the figure stays matte. Mythic: full art. */
+.has-photo .fc-art svg,.has-photo .fc-pop{display:none}
+.has-photo.fc-rare .fc-art{background:var(--photo) center var(--focus)/cover no-repeat,var(--paper)}
+.has-photo.fc-holo .fc-art{background:
+  var(--photo) center var(--focus)/cover no-repeat,
+  linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--paper) 55%,transparent) 45%,transparent 60%) var(--gx) 0/250% 100%,
+  radial-gradient(circle,color-mix(in srgb,var(--ink) 16%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
+  linear-gradient(115deg,var(--id),var(--sheet) 25%,var(--id) 50%,var(--sheet) 75%,var(--id)) var(--gx) 0/300% 100%}
+.has-photo.fc-holo .fc-art::after{content:none}
+.has-photo.fc-mythic .fc-bg{background:var(--photo) center top/cover no-repeat,var(--ink)}
+.has-photo.fc-mythic .fc-bg::before{content:none}
+.has-photo .fc-ph{display:none}
 </style>
 </head>
 <body>
-
 
 <!-- shared drawings: placeholder bust (portraits not shot yet) and the ring seal -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -820,7 +831,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
         <div class="binder-panel" role="tabpanel" id="card-jove-wellness" aria-labelledby="tab-jove-wellness">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-rare pid-jove" data-tilt aria-label="Jove Schrottmann, Wellness Form, trading card">
+            <article class="fc fc-rare pid-jove has-photo" style="--photo:url('photos/generated/web/001-jove-wellness.webp');--focus:34%" data-tilt aria-label="Jove Schrottmann, Wellness Form, trading card">
               
               <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -846,7 +857,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-jove-hospitality" aria-labelledby="tab-jove-hospitality">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-rare pid-jove" data-tilt aria-label="Jove Schrottmann, Hospitality Form, trading card">
+            <article class="fc fc-rare pid-jove has-photo" style="--photo:url('photos/generated/web/002-jove-hospitality.webp');--focus:37%" data-tilt aria-label="Jove Schrottmann, Hospitality Form, trading card">
               
               <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -872,7 +883,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-jove-blend" aria-labelledby="tab-jove-blend">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-holo pid-jove" data-tilt aria-label="Jove Schrottmann, Blend Form, trading card">
+            <article class="fc fc-holo pid-jove has-photo" style="--photo:url('photos/generated/web/003-jove-blend.webp');--focus:0%" data-tilt aria-label="Jove Schrottmann, Blend Form, trading card">
               
               <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -898,7 +909,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-jove-evolution" aria-labelledby="tab-jove-evolution">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-mythic pid-jove" data-tilt aria-label="Jove Schrottmann, Evolution Form, trading card">
+            <article class="fc fc-mythic pid-jove has-photo" style="--photo:url('photos/generated/web/004-jove-evolution.webp');--focus:0%" data-tilt aria-label="Jove Schrottmann, Evolution Form, trading card">
               <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span>
               <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               
@@ -938,7 +949,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
         <div class="binder-panel" role="tabpanel" id="card-andrew-kitchen" aria-labelledby="tab-andrew-kitchen">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-rare pid-andrew" data-tilt aria-label="Andrew Malarky, Kitchen Form, trading card">
+            <article class="fc fc-rare pid-andrew has-photo" style="--photo:url('photos/generated/web/005-andrew-kitchen.webp');--focus:37%" data-tilt aria-label="Andrew Malarky, Kitchen Form, trading card">
               
               <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -964,7 +975,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-andrew-island" aria-labelledby="tab-andrew-island">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-holo pid-andrew" data-tilt aria-label="Andrew Malarky, Island Form, trading card">
+            <article class="fc fc-holo pid-andrew has-photo" style="--photo:url('photos/generated/web/006-andrew-island.webp');--focus:0%" data-tilt aria-label="Andrew Malarky, Island Form, trading card">
               
               <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -990,7 +1001,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-andrew-festival" aria-labelledby="tab-andrew-festival">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-mythic pid-andrew" data-tilt aria-label="Andrew Malarky, Festival Form, trading card">
+            <article class="fc fc-mythic pid-andrew has-photo" style="--photo:url('photos/generated/web/007-andrew-festival.webp');--focus:0%" data-tilt aria-label="Andrew Malarky, Festival Form, trading card">
               <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span>
               <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               
@@ -1030,7 +1041,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
         <div class="binder-panel" role="tabpanel" id="card-choi-counsel" aria-labelledby="tab-choi-counsel">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-rare pid-choi" data-tilt aria-label="Choi Kapunan, Counsel Form, trading card">
+            <article class="fc fc-rare pid-choi has-photo" style="--photo:url('photos/generated/web/008-choi-counsel.webp');--focus:30%" data-tilt aria-label="Choi Kapunan, Counsel Form, trading card">
               
               <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -1056,7 +1067,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-choi-coffee" aria-labelledby="tab-choi-coffee">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-holo pid-choi" data-tilt aria-label="Choi Kapunan, Coffee Form, trading card">
+            <article class="fc fc-holo pid-choi has-photo" style="--photo:url('photos/generated/web/009-choi-coffee.webp');--focus:0%" data-tilt aria-label="Choi Kapunan, Coffee Form, trading card">
               
               <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
@@ -1082,7 +1093,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       </div><div class="binder-panel" role="tabpanel" id="card-choi-founder" aria-labelledby="tab-choi-founder">
         <div class="mtg">
           <div class="mtg-stage"><div class="flip">
-            <article class="fc fc-mythic pid-choi" data-tilt aria-label="Choi Kapunan, Founder Form, trading card">
+            <article class="fc fc-mythic pid-choi has-photo" style="--photo:url('photos/generated/web/010-choi-founder.webp');--focus:0%" data-tilt aria-label="Choi Kapunan, Founder Form, trading card">
               <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span>
               <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
               
