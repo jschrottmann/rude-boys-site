@@ -6,6 +6,16 @@
 <title>Rude Boys Hospitality v3</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex">
+<meta name="description" content="In 21 days you know what to build, what it costs and whether it works.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jschrottmann.github.io/rude-boys-site/">
+<meta property="og:title" content="Rude Boys Hospitality: build it right the first time">
+<meta property="og:description" content="In 21 days you know what to build, what it costs and whether it works.">
+<meta property="og:image" content="https://jschrottmann.github.io/rude-boys-site/photos/generated/sections/share-09-opening.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Comic illustration: opening night at an island beach venue, guests stepping off a bangka">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">
@@ -358,7 +368,7 @@ main [id]{scroll-margin-top:64px}
 .issue :is(h2,h3){font-size:clamp(24px,2.4vw,30px)}
 .issue p{font-size:15px;line-height:1.45}
 .issue .by{font:400 12px/1.4 var(--mono);color:var(--grey)}
-.issue.lead{grid-column:1 / -1;grid-template-columns:minmax(0,7fr) minmax(0,4fr);column-gap:var(--col-gap);border-left:0;padding-left:0}
+.issue.lead{grid-column:1 / -1;grid-template-columns:minmax(0,6fr) minmax(0,4fr) minmax(0,3fr);column-gap:var(--col-gap);border-left:0;padding-left:0}
 .issue.lead :is(h2,h3){font-size:clamp(36px,5vw,64px)}
 .issue.lead > div{display:grid;gap:10px;align-content:start}
 .issue.lead p{font-size:18px}
@@ -429,6 +439,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 .serve{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--col-gap)}
 .serve article{display:grid;gap:10px;align-content:start}
 .serve .vph{aspect-ratio:3/4}
+.serve-art{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 45%;border:2px solid var(--ink);border-radius:8px}
 .serve h3{font-size:clamp(28px,2.8vw,36px)}
 .serve p{font-size:16px}
 .serve-foot{margin-top:28px;font-size:18px}
@@ -455,6 +466,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   .g12,.who,.offers,.workshop{grid-template-columns:minmax(0,1fr)}
   .serve{grid-template-columns:minmax(0,1fr)}
   .serve .vph{aspect-ratio:16/9}
+  .serve-art{aspect-ratio:16/9}
   .ns.four{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fcols{grid-template-columns:repeat(2,minmax(0,1fr))}
   .band-photo .vph{aspect-ratio:16/9}
@@ -580,6 +592,16 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 .has-photo.fc-mythic .fc-bg{background:var(--photo) center top/cover no-repeat,var(--ink)}
 .has-photo.fc-mythic .fc-bg::before{content:none}
 .has-photo .fc-ph{display:none}
+
+/* Story art (graphic-novel arc, 14 Nov 2026): chapter 1 behind the hero, chapter 2 in the problem band */
+.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 50%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,color-mix(in srgb,var(--ink) 70%,transparent),transparent 55%)}
+.step-art{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+.story .story-art{margin-top:24px;max-width:420px;border-color:var(--on-ink-dim)}
+.story-art{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+.issue-cover{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+@media (max-width:900px){.issue.lead .issue-cover{order:-1;max-width:320px}}
+.finale-art{display:block;width:100%;max-width:560px;height:auto;aspect-ratio:4/3;object-fit:cover;margin-top:24px;border:2px solid var(--on-ink-dim);border-radius:8px}
 </style>
 </head>
 <body>
@@ -615,7 +637,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 
 <main>
 <section class="hero2" id="top" aria-label="Rude Boys Hospitality">
-  <div class="hero-photo" aria-hidden="true"><svg class="hero-burst" viewBox="0 0 200 200"><use href="#burst"/></svg><svg class="hero-boom" viewBox="0 0 200 100"><use href="#boom"/></svg><div class="hero-dots mcm-dots"></div></div>
+  <div class="hero-photo" aria-hidden="true"><img class="hero-art" src="photos/generated/sections/web/01-dawn.webp" alt="" width="1600" height="904" fetchpriority="high" decoding="async"></div>
   <div class="wrap hero2-in">
     <svg class="wordmark" viewBox="0 0 640 230" role="img" aria-label="Rude Boys Hospitality">
           <text x="320" y="128" text-anchor="middle" font-size="150" font-weight="900" textLength="600" lengthAdjust="spacingAndGlyphs">RUDE BOYS</text>
@@ -630,7 +652,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 
 <section class="band sheet" id="problem">
   <div class="wrap g12">
-    <div class="vph"><span>Photo to shoot: a build on Siargao</span></div>
+    <img class="story-art" src="photos/generated/sections/web/02-storm.webp" alt="Illustration: a monsoon squall hits a beachfront build site while two crew haul a crate through the surf and the generator fails" width="760" height="947" loading="lazy" decoding="async">
     <div>
       <h2>An island is not a city.</h2>
       <p>Crowds, construction, hiring and branding all work differently offshore. Build with a city playbook and it shows: the wrong crowd, a team that leaves, a brand nobody remembers.</p>
@@ -674,11 +696,13 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
     <div class="sec-head"><h2>From audit to opening night</h2></div>
     <div class="offers three">
       <article class="offer">
+        <img class="step-art" src="photos/generated/sections/web/04a-audit.webp" alt="Illustration: three partners lean over a site plan under a lantern on the empty lot at night" width="760" height="573" loading="lazy" decoding="async">
         <h3>Audit</h3>
         <p>21 days. Know what to build and what it costs.</p>
         <a class="backlink" href="#audit">The 21-Day Island Audit</a>
       </article>
       <article class="offer">
+        <img class="step-art" src="photos/generated/sections/web/04b-build.webp" alt="Illustration: crew haul the ridge beam of a bamboo frame up on ropes at midday" width="760" height="573" loading="lazy" decoding="async">
         <h3>Build</h3>
         <p>For independent owners and investors. Development advice from the first site visit to opening night.</p>
         <div class="phases">
@@ -700,6 +724,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
     </details>
       </article>
       <article class="offer">
+        <img class="step-art" src="photos/generated/sections/web/04c-run.webp" alt="Illustration: the team lines up at the pass minutes before opening, the dining room set beyond" width="760" height="573" loading="lazy" decoding="async">
         <h3>Run</h3>
         <p>We manage and run the venue, or stand beside your team until it stabilises.</p>
         <ul class="bul">
@@ -764,9 +789,9 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   <div class="wrap">
     <div class="sec-head"><h2>Who we build for</h2></div>
     <div class="serve">
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Hotels and resorts</h3><p>Feasibility, operator selection, pre-opening and the team that runs it.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Restaurants, bars and clubs</h3><p>Concept, menu, kitchen design and the crew on the pass.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
-      <article><div class="vph"><span>Photo to shoot</span></div><h3>Spas and wellness</h3><p>Spa design management and the standards that hold after opening.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
+      <article><img class="serve-art" src="photos/generated/sections/web/05-hotels.webp" alt="Illustration: a porter crosses an open-air island resort lobby at golden hour" width="760" height="1017" loading="lazy" decoding="async"><h3>Hotels and resorts</h3><p>Feasibility, operator selection, pre-opening and the team that runs it.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
+      <article><img class="serve-art" src="photos/generated/sections/web/05-restaurants.webp" alt="Illustration: a chef plates on the pass while the bar behind is in full service" width="760" height="1017" loading="lazy" decoding="async"><h3>Restaurants, bars and clubs</h3><p>Concept, menu, kitchen design and the crew on the pass.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
+      <article><img class="serve-art" src="photos/generated/sections/web/05-spas.webp" alt="Illustration: a therapist lights a candle in a garden treatment pavilion" width="760" height="1017" loading="lazy" decoding="async"><h3>Spas and wellness</h3><p>Spa design management and the standards that hold after opening.</p><a class="backlink" href="#apply">Apply for the audit</a></article>
     </div>
     <p class="serve-foot">Opening your first venue? We guide first-time founders through all of it.</p>
   </div>
@@ -783,6 +808,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
   <div class="wrap story">
     <div>
       <h2><s>Nice Guys</s><br>Rude Boys</h2>
+      <img class="story-art" src="photos/generated/sections/web/06-turn.webp" alt="Illustration: three partners walk out of a corporate boardroom into island light" width="760" height="947" loading="lazy" decoding="async">
       <svg viewBox="0 0 200 200" class="seal" role="img" aria-label="RB seal"><use href="#sealArt"/></svg>
     </div>
     <div class="body">
@@ -1133,7 +1159,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
 <section class="band" id="writing">
   <div class="wrap">
     <div class="sec-head"><h2>Field notes</h2><p>Written between services. Proposed issues, not yet written.</p></div>
-    <div class="issues"><article class="issue lead" data-topic="story"><h3>Why we stopped being nice</h3><span class="meta"><b>No. 01</b><span>Story</span><span class="dchip">To write</span></span><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></article></div>
+    <div class="issues"><article class="issue lead" data-topic="story"><div><h3>Why we stopped being nice</h3><span class="meta"><b>No. 01</b><span>Story</span><span class="dchip">To write</span></span></div><div><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></div><img class="issue-cover" src="photos/generated/sections/web/fn01.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"></article></div>
     <p class="teaser-foot"><a class="backlink" href="#field-notes">All field notes</a></p>
   </div>
 </section>
@@ -1163,6 +1189,7 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
     <div>
       <h2>Two audits a month. Apply for yours.</h2>
       <p class="deck">Five questions. If it&rsquo;s a fit, we call you within two working days.</p>
+      <img class="finale-art" src="photos/generated/sections/web/09-opening.webp" alt="" width="760" height="573" loading="lazy" decoding="async">
     </div>
     <div class="mailbox">
       <span class="k">The five questions</span>
@@ -1182,12 +1209,12 @@ main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block
       <p>What we learn running our own venues, written down for owners. Every issue below is a proposed topic: nothing is published until a partner writes it, with real numbers.</p>
     </div>
     <div class="chips" role="group" aria-label="Filter by topic"><button type="button" data-filter="all" aria-pressed="true">All<sup>6</sup></button><button type="button" data-filter="story" aria-pressed="false">Story<sup>1</sup></button><button type="button" data-filter="operations" aria-pressed="false">Operations<sup>1</sup></button><button type="button" data-filter="kitchen" aria-pressed="false">Kitchen<sup>2</sup></button><button type="button" data-filter="island" aria-pressed="false">Island<sup>1</sup></button><button type="button" data-filter="legal" aria-pressed="false">Legal<sup>1</sup></button></div>
-    <div class="issues" id="issue-list"><article class="issue lead" data-topic="story"><div><h2>Why we stopped being nice</h2><span class="meta"><b>Lead story, No. 01</b><span>Story</span><span class="dchip">To write</span></span></div><div><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></div></article>
-<article class="issue" data-topic="operations"><h2>Promotion by mastery, not tenure</h2><span class="meta"><b>No. 02</b><span>Operations</span><span class="dchip">To write</span></span><p>How the crew at The Rōnin and Wild levels up like a guild, and why years served is not a skill.</p><span class="by">By Jove Schrottmann</span></article>
-<article class="issue" data-topic="kitchen"><h2>Glocal: global method, Siargao produce</h2><span class="meta"><b>No. 03</b><span>Kitchen</span><span class="dchip">To write</span></span><p>Why the menu at Wild starts at the market, not the import list.</p><span class="by">By Andrew Malarky</span></article>
-<article class="issue" data-topic="island"><h2>An island is not a city</h2><span class="meta"><b>No. 04</b><span>Island</span><span class="dchip">To write</span></span><p>Crowds, construction, hiring and branding all change offshore. What we budget for that city consultants miss.</p><span class="by">By Jove Schrottmann and Andrew Malarky</span></article>
-<article class="issue" data-topic="kitchen"><h2>The Kitchen Takeovers</h2><span class="meta"><b>No. 05</b><span>Kitchen</span><span class="dchip">To write</span></span><p>How Wild handed its kitchen to other local cooks during the pandemic, and what the team learned from it.</p><span class="by">By Andrew Malarky</span></article>
-<article class="issue" data-topic="legal"><h2>Papers before the party</h2><span class="meta"><b>No. 06</b><span>Legal</span><span class="dchip">To write</span></span><p>What a festival needs from the Department of Tourism before the first plate goes out.</p><span class="by">By Choi Kapunan</span></article></div>
+    <div class="issues" id="issue-list"><article class="issue lead" data-topic="story"><div><h2>Why we stopped being nice</h2><span class="meta"><b>Lead story, No. 01</b><span>Story</span><span class="dchip">To write</span></span></div><div><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></div><img class="issue-cover" src="photos/generated/sections/web/fn01.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"></article>
+<article class="issue" data-topic="operations"><img class="issue-cover" src="photos/generated/sections/web/fn02.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Promotion by mastery, not tenure</h2><span class="meta"><b>No. 02</b><span>Operations</span><span class="dchip">To write</span></span><p>How the crew at The Rōnin and Wild levels up like a guild, and why years served is not a skill.</p><span class="by">By Jove Schrottmann</span></article>
+<article class="issue" data-topic="kitchen"><img class="issue-cover" src="photos/generated/sections/web/fn03.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Glocal: global method, Siargao produce</h2><span class="meta"><b>No. 03</b><span>Kitchen</span><span class="dchip">To write</span></span><p>Why the menu at Wild starts at the market, not the import list.</p><span class="by">By Andrew Malarky</span></article>
+<article class="issue" data-topic="island"><img class="issue-cover" src="photos/generated/sections/web/fn04.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>An island is not a city</h2><span class="meta"><b>No. 04</b><span>Island</span><span class="dchip">To write</span></span><p>Crowds, construction, hiring and branding all change offshore. What we budget for that city consultants miss.</p><span class="by">By Jove Schrottmann and Andrew Malarky</span></article>
+<article class="issue" data-topic="kitchen"><img class="issue-cover" src="photos/generated/sections/web/fn05.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>The Kitchen Takeovers</h2><span class="meta"><b>No. 05</b><span>Kitchen</span><span class="dchip">To write</span></span><p>How Wild handed its kitchen to other local cooks during the pandemic, and what the team learned from it.</p><span class="by">By Andrew Malarky</span></article>
+<article class="issue" data-topic="legal"><img class="issue-cover" src="photos/generated/sections/web/fn06.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Papers before the party</h2><span class="meta"><b>No. 06</b><span>Legal</span><span class="dchip">To write</span></span><p>What a festival needs from the Department of Tourism before the first plate goes out.</p><span class="by">By Choi Kapunan</span></article></div>
   </div>
 </section>
 </main>
