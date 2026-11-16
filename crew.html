@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Meet the crew, Rude Boys Hospitality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">
+<meta name="robots" content="noindex">
+<style>
+/* Hallmark · checked: 2026-11-12 · genre: editorial (inferred)
+ * floor: 0 FAIL · fixed: 48, 54, 55a, 63, 67, 26b, 40, 41, F1, F21 · structural: 58, 49, 3 printed
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · waive 64 · labels in IBM Plex Mono · the label face the heritage r2 board names for the brand */
+/* Layout: a mid-century front page (nameplate, dateline, lead, columns) that opens onto the crew binder.
+   Tokens are heritage r2 / Route A. Single light theme on purpose: it is newsprint. Red is a flag, never a paragraph. */
+:root{
+  --ink:#1A1A18; --paper:#F3EEE3; --sheet:#FFF8EC; --red:#D7261E;
+  --grey:#5E5A52; --rule:#C9C1B0; --photo:#D9D0BF; --mustard:#E3A52B; --teal:#1D6E73; --figure:#7A7366; --on-ink:#F3EEE3; --on-ink-dim:#B5AFA3;
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --serif:"Old Standard TT","Georgia","Times New Roman",serif;
+  --font-outlier:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace; --mono:var(--font-outlier);
+  --gut:max(16px,env(safe-area-inset-left,0px)); --gut-r:max(16px,env(safe-area-inset-right,0px));
+  --max:1180px; --col-gap:clamp(28px,5vw,72px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--serif);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+::selection{background:var(--ink);color:var(--paper)}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:800;line-height:1;text-transform:uppercase;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.mono{font:600 12px/1.4 var(--mono);}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* draft strip */
+.draft{background:var(--ink);color:var(--on-ink)}
+.draft .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;padding-block:10px;align-items:baseline}
+.draft b{color:var(--ink);background:var(--paper);padding:2px 6px}
+.draft span{color:var(--on-ink-dim);font:400 12px/1.5 var(--mono)}
+
+/* ---------- Front page ---------- */
+.front{padding-block:16px clamp(40px,6vw,72px)}
+.thick{border:0;border-top:6px solid var(--ink);margin:0}
+.thin{border:0;border-top:1px solid var(--ink);margin:4px 0 0}
+.nameplate{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,5fr) minmax(0,1fr);gap:clamp(12px,2vw,24px);align-items:center;padding-block:clamp(8px,1.2vw,16px)}
+.ear{border:1.5px solid var(--ink);padding:10px 8px;text-align:center;display:grid;gap:6px}
+.ear b{font:600 clamp(11px,1.1vw,13px)/1.3 var(--mono);}
+.ear small{font:400 12px/1.3 var(--mono);border-top:1px solid var(--ink);padding-top:6px}
+.wordmark{display:block;width:100%;max-width:560px;height:auto;justify-self:center}
+.wordmark text{font-family:var(--display);fill:var(--ink)}
+.dateline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-block:8px;border-bottom:1px solid var(--ink)}
+.lead{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--col-gap);padding-top:clamp(20px,2.4vw,28px);align-items:end}
+.lead h1{font-size:clamp(48px,6.6vw,84px);letter-spacing:-.005em}
+.btn.hero-cta{margin-top:24px;font-size:19px;background:var(--red);border-color:var(--red)}
+.btn.hero-cta:hover{box-shadow:3px 3px 0 var(--ink)}
+.deck{font-style:italic;font-size:clamp(18px,1.8vw,22px);line-height:1.45;margin-top:18px;max-width:34ch}
+.cols{display:grid;gap:14px;border-left:1px solid var(--ink);padding-left:clamp(16px,2vw,28px)}
+.cols p{font-size:16px}
+.cols > p:first-child::first-letter{float:left;font:800 58px/.8 var(--display);margin:4px 8px 0 0}
+.rude{display:grid;gap:6px;border-top:3px solid var(--ink);padding-top:12px;font-size:15px}
+.rude b{font-weight:700;font-size:17px}
+
+/* ---------- Crew section ---------- */
+.crew{background:var(--sheet);border-top:6px solid var(--ink);padding-block:clamp(48px,7vw,96px)}
+.sec-head{display:grid;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:14px;margin-bottom:clamp(28px,4vw,44px)}
+.sec-head h2{font-size:clamp(40px,6vw,76px)}
+.sec-head p{max-width:60ch;font-size:18px;font-style:italic;color:var(--grey)}
+
+/* tabs */
+.forms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:clamp(36px,5vw,56px)}
+.form-tab{display:grid;padding:0;text-align:left;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.tab-face{position:relative;display:grid;place-items:center;aspect-ratio:16/9;background:var(--ink);color:var(--paper);border-bottom:2px solid var(--ink);overflow:hidden}
+.tab-face b{font:900 clamp(48px,6vw,80px)/1 var(--display);letter-spacing:.02em}
+.tab-face i{position:absolute;left:12px;right:12px;bottom:14px;border-top:3px solid var(--red)}
+.tab-face em{position:absolute;top:10px;right:10px;font:600 12px/1 var(--mono);font-style:normal;color:var(--on-ink-dim)}
+.tab-label{display:grid;gap:2px;padding:12px 16px}
+.tab-label strong{font:800 20px/1.05 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.tab-label small{font:400 12px/1.4 var(--mono);color:var(--grey)}
+.form-tab:hover{transform:translate(-3px,-3px);box-shadow:3px 3px 0 var(--ink)}
+.form-tab[aria-selected="true"]{box-shadow:8px 8px 0 var(--red);transform:translate(-4px,-4px)}
+.form-tab[aria-selected="true"] .tab-label{background:var(--ink);color:var(--on-ink)}
+.form-tab[aria-selected="true"] .tab-label small{color:var(--on-ink-dim)}
+.binder-panel[hidden]{display:none}
+/* second level: a partner's forms. Rarity climbs along the row, base to evolved. */
+.partner-line{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;margin-bottom:16px}
+.partner-line b{font:800 clamp(24px,3vw,34px)/1 var(--display);text-transform:uppercase}
+.partner-line span{font-size:16px;color:var(--grey)}
+.ftabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:clamp(28px,4vw,40px)}
+.ftab{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 14px 8px 10px;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--ink);cursor:pointer;text-align:left;transition:transform .15s,box-shadow .15s}
+.ftab .fc-rarity{width:24px;height:24px}
+.ftab strong{display:block;font:800 18px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.ftab small{display:block;font:400 12px/1.3 var(--mono);color:var(--grey);margin-top:3px}
+.ftab:hover{transform:translate(-2px,-2px);box-shadow:2px 2px 0 var(--ink)}
+.ftab[aria-selected="true"]{background:var(--ink);color:var(--on-ink);box-shadow:5px 5px 0 var(--red);transform:translate(-2px,-2px)}
+.ftab[aria-selected="true"] small{color:var(--on-ink-dim)}
+.ftab .arrow{font:800 18px/1 var(--display);color:var(--grey);align-self:center}
+.binder-panel + .binder-panel{margin-top:56px}
+.binder-panel .binder-panel + .binder-panel{margin-top:40px}
+
+.mtg{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:var(--col-gap);align-items:start}
+.mtg-stage{position:relative}
+.fields{margin:0;display:grid;grid-template-columns:150px minmax(0,1fr);border-top:3px solid var(--ink)}
+.fields dt,.fields dd{margin:0;padding-block:12px;border-bottom:1px solid var(--rule)}
+.fields dt{font:600 12px/1.5 var(--mono);color:var(--grey);padding-top:15px}
+.fields dd{font-size:16px;line-height:1.5}
+.fields ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.fields li{padding-left:16px;position:relative}
+.fields li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+.fields .tcg-moves li{display:flex;justify-content:space-between;gap:16px;padding-left:0}
+.fields .tcg-moves li::before{content:none}
+.fields .tcg-moves span{font:800 20px/1.2 var(--display)}
+.dchip{display:inline-block;margin-left:8px;font:600 12px/1 var(--mono);color:var(--grey);border:1px solid var(--grey);padding:4px 8px;vertical-align:2px}
+
+/* ---------- Card: one anatomy, only the frame changes ---------- */
+.fc{--rx:0deg;--ry:0deg;--gx:50%;--px:0;--py:0;position:relative;aspect-ratio:63/88;max-width:100%;display:flex;flex-direction:column;gap:8px;padding:12px;background:var(--ink);color:var(--on-ink);border:2px solid var(--ink);overflow:hidden;touch-action:pan-y;
+  transform:perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry));
+  box-shadow:var(--sx,12px) var(--sy,12px) 0 var(--red);
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s cubic-bezier(.2,.8,.2,1)}
+.fc.is-live{transition:transform .08s linear,box-shadow .08s linear}
+.fc.is-touch{transition:none}
+.fc > :is(.fc-name,.fc-type,.fc-text,.fc-foot){position:relative;z-index:1}
+.fc-name,.fc-type{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;background:var(--sheet);color:var(--ink);border:2px solid var(--ink)}
+.fc-name h3{font-size:21px;font-weight:800;line-height:1;letter-spacing:.01em}
+.fc-type span:first-child{font:600 12px/1.2 var(--mono);}
+.lz{display:flex;gap:5px;flex:none}
+.lz i{width:11px;height:11px;transform:rotate(45deg);background:var(--red);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.lz i.k{background:var(--ink)} .lz i.p{background:var(--paper)}
+.fc-rarity{flex:none;width:22px;height:22px;display:grid;place-items:center;background:var(--ink);color:var(--paper);font:800 14px/1 var(--display);border:2px solid var(--ink)}
+.fc-art{position:relative;flex:1 1 0;min-height:0;margin:0;overflow:hidden;border:2px solid var(--ink);background:var(--paper)}
+.fc-art svg,.fc-pop{display:block}
+.fc-ph{position:absolute;left:6px;bottom:6px;z-index:4;font:600 12px/1 var(--mono);background:var(--ink);color:var(--paper);padding:5px 8px}
+.fc-text{display:grid;gap:6px;padding:9px 11px;background:var(--sheet);color:var(--ink);border:2px solid var(--ink);font-size:13px;line-height:1.35}
+.fc-tag{font:600 12px/1 var(--mono);background:var(--ink);color:var(--paper);padding:3px 6px;margin-right:3px;vertical-align:1px}
+.fc-move{display:flex;align-items:baseline;gap:8px;padding-top:5px;border-top:1px solid var(--rule)}
+.fc-move b{font-weight:700}
+.fc-move span{margin-left:auto;font:800 19px/1 var(--display);font-variant-numeric:tabular-nums}
+.fc-flavour{font-size:12px;font-style:italic;color:var(--grey);padding-top:5px;border-top:1px solid var(--rule)}
+.fc-foot{display:grid;gap:1px;font:400 12px/1.35 var(--mono);color:var(--on-ink-dim)}
+
+/* Mythic (Jove): full-art front page scene, flat-layer parallax, head breaks over the name bar */
+.fc-mythic{border-color:var(--red)}
+.fc-mythic .fc-bg{position:absolute;inset:-6%;z-index:0;background:var(--ink);transform:translate(calc(var(--px) * -1.6px),calc(var(--py) * 1.6px))}
+.fc-mythic .fc-bg::before,.fc-mythic .fc-bg::after{content:"";position:absolute;inset:0}
+.fc-mythic .fc-bg::before{background:radial-gradient(circle at 50% 34%,var(--red) 0 30%,transparent 30.5%)}
+.fc-mythic .fc-bg::after{background:repeating-linear-gradient(90deg,transparent 0 46px,color-mix(in srgb,var(--paper) 22%,transparent) 46px 47px);
+  -webkit-mask-image:linear-gradient(90deg,var(--ink) 0 20%,transparent 32% 68%,var(--ink) 80%);mask-image:linear-gradient(90deg,var(--ink) 0 20%,transparent 32% 68%,var(--ink) 80%)}
+.fc-mythic .fc-pop{position:absolute;left:50%;bottom:26%;height:78%;width:auto;z-index:3;pointer-events:none;transform:translate(calc(-50% + var(--px) * .5px),calc(var(--py) * -.5px))}
+.fc-mythic .fc-type{margin-top:auto}
+.fc-mythic .fc-type,.fc-mythic .fc-text,.fc-mythic .fc-foot{z-index:4}
+.fc-mythic .fc-foot{padding:6px 10px;background:var(--ink);color:var(--on-ink)}
+.fc-mythic .fc-ph{left:auto;right:18px;bottom:auto;top:64px;z-index:4}
+.fc-mythic::after{z-index:5}
+
+/* Holo Rare (Andrew): cutout over a red and paper foil that shifts with tilt; figure stays matte */
+.fc-holo{border-color:var(--red)}
+.fc-holo .fc-art{background:
+  repeating-linear-gradient(115deg,transparent 0 7px,color-mix(in srgb,var(--paper) 30%,transparent) 7px 8px),
+  linear-gradient(115deg,var(--red),var(--sheet) 25%,var(--red) 50%,var(--sheet) 75%,var(--red));
+  background-size:auto,300% 100%;background-position:0 0,var(--gx) 0}
+.fc-holo .fc-art svg{position:relative;z-index:3}
+
+/* Rare (Choi): a printed photo. Paper frame, warm grade, fine halftone, no foil */
+.fc-rare{background:var(--paper);border-color:var(--ink)}
+.fc-rare .fc-foot{color:var(--ink)}
+.fc-rare .fc-art{background:var(--photo)}
+.fc-rare .fc-art::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;background:
+  radial-gradient(circle at 2px 2px,color-mix(in srgb,var(--ink) 22%,transparent) 0 .8px,transparent 1.3px) 0 0/4px 4px,
+  linear-gradient(160deg,color-mix(in srgb,var(--red) 10%,transparent),transparent)}
+
+/* holo shine: one identical band on every card */
+[data-tilt]::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;
+  background:repeating-linear-gradient(115deg,color-mix(in srgb,var(--paper) 18%,transparent) 0 1px,transparent 1px 6px),
+    linear-gradient(105deg,color-mix(in srgb,var(--red) 40%,transparent) 0%,color-mix(in srgb,var(--paper) 34%,transparent) 44%,color-mix(in srgb,var(--paper) 62%,transparent) 50%,color-mix(in srgb,var(--paper) 34%,transparent) 56%,color-mix(in srgb,var(--red) 40%,transparent) 100%);
+  -webkit-mask-image:linear-gradient(105deg,transparent calc(var(--gx) - 13%),var(--ink) calc(var(--gx) - 2%),var(--ink) calc(var(--gx) + 2%),transparent calc(var(--gx) + 13%));
+          mask-image:linear-gradient(105deg,transparent calc(var(--gx) - 13%),var(--ink) calc(var(--gx) - 2%),var(--ink) calc(var(--gx) + 2%),transparent calc(var(--gx) + 13%));
+  transition:opacity .3s}
+[data-tilt].is-live::after{opacity:.8}
+
+/* flip-in when switching tabs (flat layers, one perspective per element, no nested 3D) */
+.flip{position:relative}
+.flip.flip-in > article{animation:face-in .7s cubic-bezier(.2,.8,.2,1)}
+.flip.flip-in > .card-back{animation:back-out .7s linear}
+@keyframes face-in{0%,48%{transform:perspective(1100px) rotateY(-90deg)}100%{transform:perspective(1100px) rotateY(0)}}
+@keyframes back-out{0%{opacity:1;transform:perspective(1100px) rotateY(0)}48%{opacity:1;transform:perspective(1100px) rotateY(90deg)}49%,100%{opacity:0;transform:perspective(1100px) rotateY(90deg)}}
+.card-back{position:absolute;inset:0;color:var(--paper);display:grid;place-items:center;background:var(--ink);box-shadow:inset 0 0 0 10px var(--ink),inset 0 0 0 13px var(--red),12px 12px 0 var(--red);opacity:0;pointer-events:none;z-index:3}
+.card-back svg{width:62%;height:auto}
+/* tap to flip: front turns edge-on, then the back turns in. Flat layers, one perspective each, no backface tricks */
+.flip.to-back > article{animation:edge-out .3s ease-in forwards}
+.flip.to-back > .card-back{opacity:1;pointer-events:auto;animation:edge-in .3s .3s ease-out both}
+.flip.to-front > .card-back{opacity:1;animation:edge-out .3s ease-in forwards}
+.flip.to-front > article{animation:edge-in .3s .3s ease-out both}
+.flip > article,.flip.to-back > .card-back{cursor:pointer}
+@keyframes edge-out{from{transform:perspective(1100px) rotateY(0)}to{transform:perspective(1100px) rotateY(90deg)}}
+@keyframes edge-in{from{transform:perspective(1100px) rotateY(-90deg)}to{transform:perspective(1100px) rotateY(0)}}
+@media (prefers-reduced-motion:reduce){.flip.to-back > article{visibility:hidden}.flip.to-front > .card-back{opacity:0}}
+.flip-btn{display:block;margin:22px auto 0;font:600 12px/1 var(--mono);color:var(--ink);background:var(--sheet);border:2px solid var(--ink);padding:9px 14px;cursor:pointer}
+.flip-btn:hover{background:var(--ink);color:var(--paper)}
+.seal text{font-family:var(--display);font-weight:800}
+
+/* ---------- Foot ---------- */
+.foot{background:var(--ink);color:var(--on-ink-dim)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;padding-block:28px}
+.foot .seal{width:72px;height:72px}
+.foot p{font:400 12px/1.6 var(--mono);}
+
+@media (max-width:900px){
+  .lead,.mtg{grid-template-columns:minmax(0,1fr)}
+  .mtg-stage{max-width:380px;width:100%;justify-self:center}
+}
+@media (max-width:640px){
+  .nameplate{grid-template-columns:minmax(0,1fr)}
+  .ear{display:none}
+  .cols{border-left:0;padding-left:0;border-top:1px solid var(--ink);padding-top:16px}
+  .forms{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 12px 16px 4px;margin-inline:-4px}
+  .form-tab{scroll-snap-align:start}
+  .form-tab[aria-selected="true"]{box-shadow:6px 6px 0 var(--red)}
+  .fields{grid-template-columns:110px minmax(0,1fr)}
+  .fc{margin-right:6px;box-shadow:calc(var(--sx,12px) / 2) calc(var(--sy,12px) / 2) 0 var(--red)}
+  .card-back{box-shadow:inset 0 0 0 8px var(--ink),inset 0 0 0 11px var(--red),6px 6px 0 var(--red)}
+}
+
+/* ---------- Sticky section nav ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--ink);color:var(--on-ink);border-bottom:3px solid var(--red)}
+.topnav .wrap{display:flex;align-items:center;gap:20px;min-height:52px}
+.topnav .mark{font:900 20px/1 var(--display);letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.topnav nav{display:flex;gap:clamp(14px,2.4vw,28px);margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.topnav nav::-webkit-scrollbar{display:none}
+.topnav nav a{font:600 12px/1 var(--mono);text-decoration:none;white-space:nowrap;padding-block:18px 14px;border-bottom:3px solid transparent}
+.topnav nav a:hover{border-color:var(--paper)}
+main [id]{scroll-margin-top:64px}
+
+/* ---------- Section frame ---------- */
+.band{padding-block:clamp(48px,7vw,96px);border-top:6px solid var(--ink)}
+.band.sheet{background:var(--sheet)}
+.band.ink{background:var(--ink);color:var(--on-ink);border-top-color:var(--red)}
+.band.ink .sec-head{border-color:var(--on-ink-dim)}
+.band.ink .sec-head p{color:var(--on-ink-dim)}
+
+/* What we do */
+.does{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:clamp(36px,5vw,56px)}
+.does div{padding:16px clamp(12px,1.6vw,20px) 18px;border-left:1px solid var(--ink);display:grid;gap:6px;align-content:start}
+.does div:first-child{border-left:0;padding-left:0}
+.does b{font:800 22px/1 var(--display);text-transform:uppercase}
+.does p{font-size:15px;line-height:1.45}
+.does small{font:400 12px/1.4 var(--mono);color:var(--grey)}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--col-gap)}
+.phase{display:grid;gap:10px;align-content:start}
+.phase .no{font:600 12px/1 var(--mono);color:var(--grey);}
+.phase h3{font-size:clamp(26px,2.6vw,34px);border-bottom:3px solid var(--ink);padding-bottom:10px}
+.bul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:15px;line-height:1.45}
+.bul li{position:relative;padding-left:16px}
+.bul li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--red);transform:rotate(45deg)}
+.more-svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap);margin-top:clamp(36px,5vw,56px);padding-top:clamp(24px,3vw,32px);border-top:1px solid var(--ink)}
+.more-svc h3{font-size:24px;margin-bottom:12px}
+.more-svc .bul{columns:2;column-gap:24px;display:block}
+.more-svc .bul li{break-inside:avoid;margin-bottom:6px}
+.svc-more{margin-top:clamp(28px,4vw,44px);border-top:1px solid var(--ink)}
+.svc-more summary{cursor:pointer;padding-block:16px;font:800 22px/1.1 var(--display);text-transform:uppercase;letter-spacing:.02em;list-style:none}
+.svc-more summary::-webkit-details-marker{display:none}
+.svc-more summary::after{content:" +";color:var(--red)}
+.svc-more[open] summary::after{content:" \2212"}
+.svc-more .more-svc{margin-top:0;border-top:0;padding-top:8px}
+.fine{font-size:14px;color:var(--grey);margin-top:16px;max-width:60ch}
+
+/* Venues */
+.venues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap)}
+.venue{display:grid;gap:12px;align-content:start;border-top:3px solid var(--ink);padding-top:14px}
+.venue .where{font:600 12px/1 var(--mono);color:var(--grey)}
+.venue h3{font-size:clamp(34px,4vw,52px)}
+.venue p{font-size:16px;max-width:52ch}
+.plate{justify-self:start;display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--ink);padding:8px 12px;font:600 12px/1 var(--mono);}
+.plate i{width:8px;height:8px;background:var(--red);transform:rotate(45deg)}
+.vph{aspect-ratio:16/9;border:2px solid var(--ink);display:grid;place-items:center;background:
+  linear-gradient(to top right,transparent calc(50% - 1px),var(--rule) 50%,transparent calc(50% + 1px)),
+  linear-gradient(to top left,transparent calc(50% - 1px),var(--rule) 50%,transparent calc(50% + 1px)),var(--paper)}
+.vph span{font:600 12px/1 var(--mono);background:var(--paper);padding:6px 10px;border:1px solid var(--ink)}
+
+/* Name story */
+.story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--col-gap);align-items:start}
+.story h2{font-size:clamp(48px,7vw,96px)}
+.story h2 s{text-decoration-color:var(--red);text-decoration-thickness:.12em}
+.story .body{display:grid;gap:16px;max-width:60ch}
+.story .body p{font-size:18px;color:var(--on-ink)}
+.story .body p.dim{font:400 12px/1.6 var(--mono);color:var(--on-ink-dim)}
+.story .seal{width:120px;height:120px;margin-top:24px}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--col-gap);align-items:end}
+.contact h2{font-size:clamp(44px,6.4vw,88px)}
+.contact .deck{margin-top:16px}
+.mailbox{display:grid;gap:12px;border:2px solid var(--ink);background:var(--paper);padding:20px;box-shadow:8px 8px 0 var(--red)}
+.mailbox .k{font:600 12px/1 var(--mono);color:var(--grey)}
+.mailbox code{font:800 clamp(20px,2.4vw,28px)/1.15 var(--display);letter-spacing:.01em;user-select:all;word-break:break-all}
+.mailbox .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 18px;font:800 16px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:active,.ftab:active,.form-tab:active,.chips button:active,.topnav .cta:active{transform:translate(0,0);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.ftab,.form-tab{white-space:nowrap}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--red)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.mailbox ol{margin:0;padding-left:20px;font-size:15px;display:grid;gap:4px}
+
+@media (max-width:900px){
+  .does{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .does div:nth-child(3){border-left:0;padding-left:0}
+  .does div:nth-child(n+3){border-top:1px solid var(--ink)}
+  .phases,.more-svc,.venues,.story,.contact{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .does{grid-template-columns:minmax(0,1fr)}
+  .does div{border-left:0;padding-left:0}
+  .does div + div{border-top:1px solid var(--ink)}
+  .more-svc .bul{columns:1}
+  .topnav .mark{display:none}
+  .topnav nav{margin-left:0}
+}
+
+/* ---------- Nav CTA (borrowed: one standing call to action) ---------- */
+.topnav .cta{flex:none;font:800 19px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;background:var(--red);color:var(--paper);padding:10px 14px 9px}
+.topnav .cta:hover{background:var(--paper);color:var(--ink)}
+
+/* ---------- Northstar method ---------- */
+.ns-intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--col-gap);margin-bottom:clamp(32px,4vw,48px)}
+.ns-intro p{font-size:18px;max-width:52ch}
+.ns-intro .fine{font-size:14px;margin-top:0}
+.ns{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:3px solid var(--ink);border-bottom:1px solid var(--ink)}
+.ns li{display:grid;gap:8px;align-content:start;padding:16px clamp(12px,1.4vw,18px) 20px;border-left:1px solid var(--ink)}
+.ns li:first-child{border-left:0;padding-left:0}
+.ns .step{font:800 44px/1 var(--display);color:var(--red)}
+.ns .part{font:600 12px/1.3 var(--mono);color:var(--grey)}
+.ns h3{font-size:26px}
+.ns p{font-size:15px;line-height:1.45}
+
+/* ---------- What you receive ---------- */
+.receive{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--col-gap);align-items:start}
+.sheetdoc{background:var(--sheet);border:2px solid var(--ink);padding:clamp(16px,2.4vw,28px);box-shadow:10px 10px 0 var(--red);transform:rotate(-1deg);display:grid;gap:12px;max-width:100%}
+.sheetdoc .wordmark{max-width:340px;justify-self:center}
+.sheetdoc .dateline{font:600 12px/1.3 var(--mono);}
+.sheetdoc h3{font-size:clamp(30px,3.4vw,44px)}
+.sheetdoc .deckline{font-style:italic;font-size:15px}
+.sheetdoc .grid3{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr) minmax(0,1fr);gap:14px;border-top:1px solid var(--ink);padding-top:12px}
+.sheetdoc .grid3 > *{font-size:13px;line-height:1.45}
+.sheetdoc .box{border:1.5px solid var(--ink);padding:10px 12px;display:grid;gap:4px}
+.sheetdoc .box b{font:800 15px/1 var(--display);border-bottom:1px solid var(--ink);padding-bottom:6px;margin-bottom:2px}
+.sheetdoc .box span{display:flex;justify-content:space-between;gap:8px;font:400 12px/1.4 var(--mono)}
+.sheetdoc .ph{aspect-ratio:4/3;border:1.5px solid var(--ink);background:
+  linear-gradient(to top right,transparent calc(50% - 1px),var(--ink) 50%,transparent calc(50% + 1px)),
+  linear-gradient(to top left,transparent calc(50% - 1px),var(--ink) 50%,transparent calc(50% + 1px))}
+.sheetdoc .stamp{font:600 12px/1.4 var(--mono);color:var(--grey);border-top:3px solid var(--ink);padding-top:8px}
+.deliver{display:grid;gap:0;border-top:3px solid var(--ink)}
+.deliver > div{display:grid;gap:4px;padding-block:16px;border-bottom:1px solid var(--rule)}
+.deliver .n{font:800 30px/1 var(--display);color:var(--red)}
+.deliver b{font:800 22px/1.05 var(--display);text-transform:uppercase;display:block;margin-bottom:4px}
+.deliver p{font-size:15px;line-height:1.45}
+
+/* ---------- Field notes: home teaser + back-issues view (#field-notes, CSS :target, no router) ---------- */
+.issues{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:3px solid var(--ink)}
+.issue{display:grid;gap:8px;align-content:start;padding:16px clamp(12px,1.6vw,20px) 20px;border-left:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.issues .issue:nth-child(3n+1){border-left:0;padding-left:0}
+.issue .meta{display:flex;flex-wrap:wrap;gap:4px 10px;font:600 12px/1.3 var(--mono);color:var(--grey)}
+.issue .meta b{color:var(--red)}
+.issue :is(h2,h3){font-size:clamp(24px,2.4vw,30px)}
+.issue p{font-size:15px;line-height:1.45}
+.issue .by{font:400 12px/1.4 var(--mono);color:var(--grey)}
+.issue.lead{grid-column:1 / -1;grid-template-columns:minmax(0,6fr) minmax(0,4fr) minmax(0,3fr);column-gap:var(--col-gap);border-left:0;padding-left:0}
+.issue.lead :is(h2,h3){font-size:clamp(36px,5vw,64px)}
+.issue.lead > div{display:grid;gap:10px;align-content:start}
+.issue.lead p{font-size:18px}
+.issue[hidden]{display:none}
+.notes-head{display:grid;gap:14px;margin-bottom:clamp(24px,3vw,36px)}
+.notes-head h1{font-size:clamp(56px,9vw,120px)}
+.notes-head p{font-style:italic;font-size:clamp(18px,1.8vw,22px);max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(24px,3vw,36px)}
+.chips button{min-height:40px;padding:8px 12px;font:600 12px/1 var(--mono);color:var(--ink);background:var(--paper);border:1.5px solid var(--ink);cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chips sup{font-size:10px;margin-left:3px}
+.backlink{font:600 12px/1 var(--mono);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:4px;justify-self:start}
+.teaser-foot{margin-top:24px}
+.crumb{font:400 14px/1.4 var(--serif);color:var(--grey)}
+.crumb a{color:var(--ink);text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:3px}
+#field-notes{display:none}
+main:has(#field-notes:target) > :not(#field-notes),body.notes main > :not(#field-notes){display:none}
+main:has(#field-notes:target) #field-notes,body.notes #field-notes{display:block}
+
+@media (max-width:900px){
+  .ns{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ns li{border-top:1px solid var(--ink)}
+  .ns li:nth-child(odd){border-left:0;padding-left:0}
+  .ns-intro,.receive,.issue.lead{grid-template-columns:minmax(0,1fr)}
+  .issues{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .issues .issue:nth-child(3n+1){border-left:1px solid var(--ink);padding-left:clamp(12px,1.6vw,20px)}
+  .issues .issue:nth-child(odd){border-left:0;padding-left:0}
+  .issues .issue.lead{border-left:0;padding-left:0}
+}
+@media (max-width:640px){
+  .ns,.issues{grid-template-columns:minmax(0,1fr)}
+  .ns li,.issues .issue{border-left:0!important;padding-left:0!important}
+  .sheetdoc{transform:none;box-shadow:6px 6px 0 var(--red)}
+  .sheetdoc .grid3{grid-template-columns:minmax(0,1fr)}
+  .topnav .cta{padding:8px 10px 7px}
+}
+
+/* ---------- v2: the wireframe structure (12 sections) in the newspaper system ---------- */
+.hero2{position:relative;background:var(--ink);color:var(--on-ink);min-height:min(86svh,760px);display:grid;align-items:end;overflow:hidden;border-bottom:6px solid var(--red)}
+.hero-photo{position:absolute;inset:0;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--paper) 7%,transparent) 0 1px,transparent 1px 16px),var(--ink)}
+.hero-photo .fc-ph{left:auto;right:max(16px,env(safe-area-inset-right,0px));top:16px;bottom:auto}
+.hero2-in{position:relative;padding-block:clamp(48px,7vw,88px) clamp(40px,6vw,72px);display:grid;gap:20px;justify-items:start}
+.hero2 .wordmark{max-width:340px;justify-self:start}
+.hero2 .wordmark text{fill:var(--paper)}
+.hero2 h1{font-size:clamp(48px,6.4vw,88px);max-width:18ch}
+.hero2 .deck{color:var(--on-ink);margin-top:0;max-width:36ch}
+.hero2 .acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero2 .btn.ghost{background:transparent;color:var(--paper);border-color:var(--paper)}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--paper);font-size:19px}
+.btn.red:hover{box-shadow:3px 3px 0 var(--paper)}
+.g12{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--col-gap);align-items:center}
+.g12 .vph{aspect-ratio:4/5}
+.g12 h2{font-size:clamp(44px,6vw,80px);margin-bottom:20px}
+.g12 p{font-size:18px;max-width:52ch}
+.g12 p + p{margin-top:14px}
+.who{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:var(--col-gap);align-items:start}
+.who h2{font-size:clamp(28px,3vw,40px)}
+.who .big{font-size:clamp(22px,2.4vw,30px);line-height:1.4}
+.who .backlink{display:inline-block;margin-top:20px}
+.ns.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap)}
+.offer{border-top:6px solid var(--ink);padding-top:16px;display:grid;gap:14px;align-content:start}
+.offer h3{font-size:clamp(44px,5vw,64px)}
+.offer > p{font-size:18px;max-width:46ch}
+.offer .phases{grid-template-columns:minmax(0,1fr);gap:20px}
+.offer .phase h3{font-size:24px;border-bottom:1px solid var(--ink);padding-bottom:6px}
+.offer .svc-more{margin-top:8px}
+.serve{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--col-gap)}
+.serve article{display:grid;gap:10px;align-content:start}
+.serve .vph{aspect-ratio:3/4}
+.serve-art{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 45%;border:2px solid var(--ink);border-radius:8px}
+.serve h3{font-size:clamp(28px,2.8vw,36px)}
+.serve p{font-size:16px}
+.serve-foot{margin-top:28px;font-size:18px}
+.workshop{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--col-gap);align-items:center}
+.workshop h2{font-size:clamp(36px,4.4vw,56px);margin-bottom:12px}
+.workshop p{font-size:18px;max-width:56ch}
+.band-photo{padding-block:0;border-top:0}
+.band-photo .vph{aspect-ratio:3/1;border-inline:0;border-top:0}
+.band-photo .venues{padding-block:clamp(40px,5vw,64px)}
+#contact .deck{color:var(--on-ink)}
+#contact h2{color:var(--paper)}
+#contact .mailbox{color:var(--ink)}
+.foot2{background:var(--ink);color:var(--on-ink-dim);border-top:6px solid var(--red)}
+.foot2 .wrap{padding-block:48px 28px}
+.fcols{display:grid;grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr));gap:var(--col-gap)}
+.fcols b{display:block;font:800 18px/1 var(--display);text-transform:uppercase;color:var(--paper);margin-bottom:12px}
+.fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}
+.fcols a{color:var(--on-ink);text-decoration:none}
+.fcols a:hover{text-decoration:underline;text-decoration-color:var(--red)}
+.fcols .seal{width:88px;height:88px;margin-bottom:12px}
+.fcols p{font-size:15px;max-width:34ch}
+.legal{margin-top:40px;padding-top:16px;border-top:1px solid color-mix(in srgb,var(--paper) 25%,transparent);font:400 12px/1.6 var(--mono)}
+@media (max-width:900px){
+  .g12,.who,.offers,.workshop{grid-template-columns:minmax(0,1fr)}
+  .serve{grid-template-columns:minmax(0,1fr)}
+  .serve .vph{aspect-ratio:16/9}
+  .serve-art{aspect-ratio:16/9}
+  .ns.four{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fcols{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .band-photo .vph{aspect-ratio:16/9}
+}
+@media (max-width:640px){
+  .ns.four,.fcols{grid-template-columns:minmax(0,1fr)}
+}
+
+/* ---------- v3: the sale ---------- */
+.audit{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:var(--col-gap);align-items:start}
+.audit-parts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--col-gap)}
+.audit-parts article{border-top:6px solid var(--ink);padding-top:14px;display:grid;gap:10px}
+.audit-parts h3{font-size:clamp(28px,3vw,40px)}
+.audit-parts p{font-size:17px}
+.audit-time{grid-column:1 / -1;font:400 15px/1.5 var(--mono);border-top:1px solid var(--ink);padding-top:12px}
+.audit-price{background:var(--ink);color:var(--on-ink);padding:24px;display:grid;gap:12px;box-shadow:10px 10px 0 var(--red)}
+.audit-price .price{font:900 clamp(48px,6vw,72px)/1 var(--display);color:var(--paper)}
+.audit-price p{font-size:16px}
+.audit-price .scarce{font:400 14px/1.4 var(--mono);color:var(--on-ink-dim)}
+.audit-price .btn{justify-self:start}
+.offers.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.serve .backlink{justify-self:start;margin-top:4px}
+.workgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:3px solid var(--ink)}
+.workcard{display:grid;gap:6px;align-content:start;padding:18px clamp(12px,1.6vw,20px) 22px;border-bottom:1px solid var(--ink);border-left:1px solid var(--ink)}
+.workcard:nth-child(3n+1){border-left:0;padding-left:0}
+.workcard h3{font-size:clamp(24px,2.4vw,30px)}
+.workcard p{font-size:16px}
+.bigidea{font:800 clamp(28px,3vw,40px)/1.05 var(--display);text-transform:uppercase;color:var(--paper)}
+.faq{display:grid;border-top:3px solid var(--ink);max-width:880px}
+.faq details{border-bottom:1px solid var(--ink)}
+.faq summary{cursor:pointer;list-style:none;padding-block:18px;font:800 clamp(22px,2.2vw,28px)/1.1 var(--display);text-transform:uppercase}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:" +";color:var(--red)}
+.faq details[open] summary::after{content:" \2212"}
+.faq details p{font-size:18px;padding-bottom:18px;max-width:60ch}
+#apply .deck{color:var(--on-ink)}
+#apply h2{color:var(--paper)}
+#apply .mailbox{color:var(--ink)}
+@media (max-width:900px){
+  .audit,.offers.three{grid-template-columns:minmax(0,1fr)}
+  .workgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .workcard:nth-child(3n+1){border-left:1px solid var(--ink);padding-left:clamp(12px,1.6vw,20px)}
+  .workcard:nth-child(odd){border-left:0;padding-left:0}
+}
+@media (max-width:640px){
+  .audit-parts,.workgrid{grid-template-columns:minmax(0,1fr)}
+  .workcard{border-left:0!important;padding-left:0!important}
+  .audit-price{box-shadow:6px 6px 0 var(--red)}
+}
+
+/* ---------- Mid-century layer (board 1, approved 13 Nov 2026) ----------
+   Identity colour per partner: red Jove, mustard Andrew, teal Choi. Page stays square; cards take a 14px corner.
+   Rarity shows as a four-point spark: carbon Rare, mustard Holo, red Mythic. Original shapes only. */
+.pid-jove{--id:var(--red);--on-id:var(--paper);--scene:var(--teal)}
+.pid-andrew{--id:var(--mustard);--on-id:var(--ink);--scene:var(--teal)}
+.pid-choi{--id:var(--teal);--on-id:var(--paper);--scene:var(--mustard)}
+.mcm-dots{background-image:radial-gradient(circle,currentColor 1.1px,transparent 1.4px);background-size:7px 7px}
+.fc{border-radius:14px;background:var(--sheet);box-shadow:var(--sx,12px) var(--sy,12px) 0 var(--id,var(--red))}
+.fc-name,.fc-type{border-radius:999px;background:var(--id);color:var(--on-id);padding:6px 12px}
+.fc-name .lz{display:none}
+.fc-art,.fc-text{border-radius:8px}
+.fc-rarity{width:24px;height:24px;border:0;font-size:0;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--ink)}
+.fc-holo .fc-rarity{background:var(--mustard)}
+.fc-mythic .fc-rarity{background:var(--red)}
+.pid-jove.fc-mythic .fc-rarity{background:var(--paper)}
+.fc-name::after{content:"";width:22px;height:22px;flex:none;background:inherit;filter:brightness(.92);clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
+/* standard frame art: burst in the partner colour, halftone, cut-paper figure */
+.fc-rare .fc-art,.fc-holo .fc-art{background:
+  radial-gradient(circle,color-mix(in srgb,var(--ink) 16%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
+  radial-gradient(circle at 50% 62%,var(--id) 0 34%,transparent 34.5%),
+  var(--paper)}
+.fc-holo .fc-art{background-size:7px 7px,auto,auto}
+.fc-holo .fc-art::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--paper) 55%,transparent) 45%,color-mix(in srgb,var(--mustard) 40%,transparent) 52%,transparent 66%);background-size:250% 100%;background-position:var(--gx) 0;mix-blend-mode:screen}
+.fc-rare .fc-art::after{content:none}
+.fc-rare .fc-art svg,.fc-holo .fc-art svg{height:92%;margin-top:auto}
+.fc-rare .fc-art,.fc-holo .fc-art{display:flex;align-items:flex-end}
+/* showcase frame (Mythic): scene colour, partner burst, see-through ink text */
+.fc-mythic{background:var(--ink)}
+.fc-mythic .fc-bg{background:
+  radial-gradient(circle,color-mix(in srgb,var(--paper) 14%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
+  var(--scene)}
+.fc-mythic .fc-bg::before{background:radial-gradient(circle at 50% 32%,var(--id) 0 30%,transparent 30.5%)}
+.fc-mythic .fc-bg::after{content:none}
+.fc-mythic .fc-name,.fc-mythic .fc-type{box-shadow:0 3px 0 var(--ink)}
+.fc-mythic .fc-text{background:color-mix(in srgb,var(--ink) 82%,transparent);color:var(--paper);border-color:var(--paper)}
+.fc-mythic .fc-text .fc-tag{background:var(--paper);color:var(--ink)}
+.fc-mythic .fc-flavour{color:var(--paper);border-color:color-mix(in srgb,var(--paper) 30%,transparent)}
+.fc-mythic .fc-move{border-color:color-mix(in srgb,var(--paper) 30%,transparent)}
+.fc-mythic .fc-foot{background:var(--ink);color:var(--paper);border-radius:8px;padding:5px 8px}
+.fc-rare .fc-foot,.fc-holo .fc-foot{color:var(--grey)}
+.fc-ph{border-radius:999px}
+.card-back{border-radius:14px}
+/* partner tabs and form tabs carry the identity colour */
+#tab-jove{--id:var(--red)} #tab-andrew{--id:var(--mustard)} #tab-choi{--id:var(--teal)}
+.form-tab .tab-face i{border-color:var(--id)}
+.form-tab[aria-selected="true"]{box-shadow:8px 8px 0 var(--id)}
+#p-jove{--id:var(--red);--on-id:var(--paper)} #p-andrew{--id:var(--mustard);--on-id:var(--ink)} #p-choi{--id:var(--teal);--on-id:var(--paper)}
+.ftab[aria-selected="true"]{box-shadow:5px 5px 0 var(--id)}
+.ftab .fc-rarity{width:22px;height:22px}
+/* hero: mustard burst, teal boomerang, halftone over ink */
+.hero-photo{background:var(--ink)}
+.hero-photo .fc-ph{display:none}
+.hero-burst{position:absolute;right:-140px;top:-160px;width:min(720px,70vw);height:min(720px,70vw);color:var(--mustard)}
+.hero-boom{position:absolute;right:12%;bottom:12%;width:min(340px,30vw);height:min(170px,15vw);color:var(--teal)}
+.hero-dots{position:absolute;inset:0;color:var(--paper);opacity:.06}
+/* price as a mid-century price tag */
+.price-burst{position:relative;width:250px;height:250px;display:grid;place-items:center;justify-self:center;color:var(--ink)}
+.price-burst svg{position:absolute;inset:0;width:100%;height:100%;color:var(--mustard)}
+.audit-price .price-burst .price{position:relative;color:var(--ink);font-size:30px;white-space:nowrap}
+.btn:hover{box-shadow:3px 3px 0 var(--mustard)}
+@media (max-width:900px){.hero-boom{display:none}.hero-burst{right:-200px;top:-120px;width:520px;height:520px}}
+
+/* Card portraits (generated set, 760px WebP). Rare: the full image in the art window.
+   Holo Rare: cutout over partner-colour foil that shifts on tilt; the figure stays matte. Mythic: full art. */
+.has-photo .fc-art svg,.has-photo .fc-pop{display:none}
+.has-photo.fc-rare .fc-art{background:var(--photo) center var(--focus)/cover no-repeat,var(--paper)}
+.has-photo.fc-holo .fc-art{background:
+  var(--photo) center var(--focus)/cover no-repeat,
+  linear-gradient(115deg,transparent 30%,color-mix(in srgb,var(--paper) 55%,transparent) 45%,transparent 60%) var(--gx) 0/250% 100%,
+  radial-gradient(circle,color-mix(in srgb,var(--ink) 16%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
+  linear-gradient(115deg,var(--id),var(--sheet) 25%,var(--id) 50%,var(--sheet) 75%,var(--id)) var(--gx) 0/300% 100%}
+.has-photo.fc-holo .fc-art::after{content:none}
+.has-photo.fc-mythic .fc-bg{background:var(--photo) center top/cover no-repeat,var(--ink)}
+.has-photo.fc-mythic .fc-bg::before{content:none}
+.has-photo .fc-ph{display:none}
+
+/* Rarity ladder for the shine (15 Nov 2026): Rare matte, Holo Rare foil in the art window only
+   (figure stays matte, foil sits under the cutout), Mythic foil over the whole card. */
+.fc-rare::after,.fc-holo::after{content:none}
+.has-photo.fc-holo .fc-art{background:
+  var(--photo) center var(--focus)/cover no-repeat,
+  linear-gradient(115deg,transparent 28%,color-mix(in srgb,var(--paper) 85%,transparent) 44%,color-mix(in srgb,var(--mustard) 60%,transparent) 50%,color-mix(in srgb,var(--paper) 85%,transparent) 56%,transparent 72%) var(--gx) 0/250% 100%,
+  repeating-linear-gradient(115deg,transparent 0 5px,color-mix(in srgb,var(--paper) 35%,transparent) 5px 6px),
+  radial-gradient(circle,color-mix(in srgb,var(--ink) 16%,transparent) 1.1px,transparent 1.4px) 0 0/7px 7px,
+  linear-gradient(115deg,var(--id),var(--sheet) 25%,var(--id) 50%,var(--sheet) 75%,var(--id)) var(--gx) 0/300% 100%}
+.fc-mythic::after{
+  background:repeating-linear-gradient(115deg,color-mix(in srgb,var(--paper) 22%,transparent) 0 1px,transparent 1px 5px),
+    linear-gradient(105deg,color-mix(in srgb,var(--id) 50%,transparent) 0%,color-mix(in srgb,var(--mustard) 45%,transparent) 30%,color-mix(in srgb,var(--paper) 75%,transparent) 50%,color-mix(in srgb,var(--teal) 40%,transparent) 70%,color-mix(in srgb,var(--id) 50%,transparent) 100%);
+  -webkit-mask-image:linear-gradient(105deg,transparent calc(var(--gx) - 30%),var(--ink) calc(var(--gx) - 6%),var(--ink) calc(var(--gx) + 6%),transparent calc(var(--gx) + 30%));
+          mask-image:linear-gradient(105deg,transparent calc(var(--gx) - 30%),var(--ink) calc(var(--gx) - 6%),var(--ink) calc(var(--gx) + 6%),transparent calc(var(--gx) + 30%));
+  mix-blend-mode:screen}
+.fc-mythic.is-live::after{opacity:.9}
+
+/* Full set (15 Nov 2026): ten small flat cards under the binder, no tilt or shine. Tap opens the card above. */
+.set{margin-top:clamp(48px,6vw,72px);border-top:3px solid var(--ink);padding-top:16px}
+.set-head{font-size:clamp(24px,3vw,34px);margin-bottom:20px}
+.set-head span{color:var(--grey)}
+.set-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.set-card{display:grid;gap:8px;width:100%;padding:6px;font:inherit;color:var(--ink);text-align:left;background:var(--sheet);border:2px solid var(--ink);border-radius:10px;box-shadow:4px 4px 0 var(--id);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.set-card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--id)}
+.set-card:active{transform:none;box-shadow:2px 2px 0 var(--id)}
+.set-art{display:block;aspect-ratio:3/4;border:2px solid var(--ink);border-radius:6px;background:var(--photo) center var(--focus)/cover no-repeat,var(--id)}
+.set-meta{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 4px 4px}
+.set-meta b{display:block;font:600 12px/1.2 var(--mono);color:var(--grey)}
+.set-meta strong{display:block;font:800 17px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.set-card .fc-rarity{width:20px;height:20px}
+.set-holo .fc-rarity{background:var(--mustard)}
+.set-mythic .fc-rarity{background:var(--red)}
+@media (max-width:900px){.set-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.set-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+
+/* Story art (graphic-novel arc, 14 Nov 2026): chapter 1 behind the hero, chapter 2 in the problem band */
+.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 50%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,color-mix(in srgb,var(--ink) 70%,transparent),transparent 55%)}
+.step-art{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+.story .story-art{margin-top:24px;max-width:420px;border-color:var(--on-ink-dim)}
+.story-art{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+.issue-cover{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border:2px solid var(--ink);border-radius:8px}
+@media (max-width:900px){.issue.lead .issue-cover{order:-1;max-width:320px}}
+.finale-art{display:block;width:100%;max-width:560px;height:auto;aspect-ratio:4/3;object-fit:cover;margin-top:24px;border:2px solid var(--on-ink-dim);border-radius:8px}
+</style>
+<style>
+:root { --rb-red:#D7261E; --rb-mustard:#E3A52B; --rb-carbon:#1A1A18; --rb-cream:#F3EEE3; }
+.rb-wordmark { display:block; width:min(560px, 82vw); margin:0 auto 1.5rem; }
+.rb-wordmark text { font-family:'Big Shoulders Display', sans-serif; fill:var(--rb-cream); }
+.sc-statement { font-size:calc(clamp(2.6rem, min(8vw, 10vh), 6.5rem) * var(--sc-fit, 1)); }
+.rb-for { font:600 clamp(12px,1.3vw,14px)/1.5 var(--mono); color:var(--rb-cream); max-width:46ch; margin:0 auto .9rem; }
+.rb-deck { font-size:clamp(1.15rem, 2.2vw, 1.5rem); line-height:1.45; color:var(--rb-cream); max-width:34ch; margin:0 auto 1.75rem; }
+.rb-acts { display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; }
+.rb-btn { font-family:'Big Shoulders Display', sans-serif; font-weight:800; font-size:19px; letter-spacing:.02em; text-transform:uppercase; text-decoration:none; padding:.85rem 1.6rem; border:2px solid var(--rb-cream); }
+.rb-btn.red { background:var(--rb-red); border-color:var(--rb-red); color:#fff; }
+.rb-btn.ghost { background:var(--rb-carbon); color:var(--rb-cream); }
+.rb-copy p { font-size:clamp(1.05rem, 1.6vw, 1.25rem); line-height:1.6; color:var(--sc-muted); margin:0 0 1rem; }
+.rb-copy b { color:var(--rb-cream); }
+.section-content:has(.rb-caption) { background:var(--rb-carbon); border:2px solid var(--rb-cream); box-shadow:8px 8px 0 var(--rb-red); padding:clamp(1.25rem,3vw,2.25rem) !important; margin:0 clamp(1rem,5vw,4rem); }
+.section-content:has(.rb-caption) :is(h2, p) { background:var(--rb-carbon); }
+/* proof card: too much copy to pin, so it scrolls over the art */
+#scroll-container { height:auto !important; }
+.scroll-section:has(.rb-card) { padding-block:20vh; }
+.scroll-section:has(.rb-card) .section-sticky { position:relative !important; height:auto !important; overflow:visible !important; }
+.rb-card { background:var(--sheet); color:var(--ink); border:2px solid var(--ink); box-shadow:10px 10px 0 var(--red); padding:clamp(20px,3vw,36px); text-align:left; font-size:17px; line-height:1.6; display:grid; gap:18px; }
+.rb-card :is(h2, h3, p, li, .backlink, summary) { background:var(--sheet); }
+.rb-card h2 { font-size:clamp(40px,5vw,64px); }
+.rb-card .rb-sub { font-size:clamp(26px,3vw,34px); margin-top:12px; }
+.rb-card .big { font-size:clamp(18px,1.8vw,21px); line-height:1.5; }
+.rb-card .backlink { justify-self:start; }
+.rb-card .workgrid { margin:0; }
+@media (max-width:760px) { .rb-card .workgrid { grid-template-columns:minmax(0,1fr); } .rb-card .workcard { border-left:0; padding-left:0; } }
+/* the paper half sits over the fixed canvas */
+.rb-paper { position:relative; z-index:20; background:var(--paper); }
+.draft, .foot2 { position:relative; z-index:20; }
+.rb-more { margin-top:clamp(28px,4vw,44px); }
+.rb-more > :not(summary) { margin-top:16px; }
+.rb-svc h3 { font-size:clamp(28px,3vw,40px); margin:20px 0 12px; }
+.rb-trio { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--col-gap); }
+.rb-trio figure { margin:0; display:grid; gap:10px; align-content:start; }
+.rb-trio img { width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%; border:2px solid var(--ink); box-shadow:8px 8px 0 var(--red); }
+.rb-trio h3 { font-size:clamp(26px,2.6vw,34px); }
+.rb-trio .by { font:600 12px/1.4 var(--mono); color:var(--grey); }
+.rb-bigidea { font:800 clamp(28px,3.4vw,44px)/1.05 var(--display); text-transform:uppercase; color:var(--red); }
+.rb-crewlink { display:inline-block; margin-top:clamp(24px,3vw,36px); }
+@media (max-width:760px) { .rb-trio { grid-template-columns:minmax(0,1fr); } .rb-trio img { aspect-ratio:1/1; } }
+/* apply form */
+.rb-form { display:grid; gap:14px; }
+.rb-form label { display:grid; gap:6px; font-size:15px; }
+.rb-form .five { display:grid; gap:8px; border:0; padding:0; margin:0; }
+.rb-form .five legend { font-size:15px; margin-bottom:6px; padding:0; }
+.rb-form :is(input, select) { font:400 16px/1.3 var(--serif); color:var(--ink); background:var(--sheet); border:2px solid var(--ink); border-radius:0; padding:10px 12px; width:100%; min-width:0; }
+.rb-form :is(input, select):focus-visible { outline:3px solid var(--red); outline-offset:1px; }
+.rb-form .btn.red { color:#fff; }
+.rb-form-msg { font:600 13px/1.4 var(--mono); min-height:1.4em; }
+.rb-form-msg.err { color:var(--red); }
+/* phone apply bar */
+.rb-sticky { display:none; }
+@media (max-width:767px) {
+  .rb-sticky { display:block; position:fixed; left:0; right:0; bottom:0; z-index:60; background:var(--red); color:#fff; text-align:center; text-decoration:none;
+    font:800 19px/1 var(--display); letter-spacing:.02em; text-transform:uppercase;
+    padding:16px max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    transform:translateY(110%); transition:transform .25s; border-top:3px solid var(--ink); }
+  .rb-sticky.on { transform:none; }
+}
+@media (prefers-reduced-motion:reduce) { .rb-sticky { transition:none; } }
+</style>
+</head>
+<body>
+<!-- shared drawings: placeholder bust (portraits not shot yet) and the ring seal -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="burst" viewBox="0 0 200 200"><path style="fill:currentColor" d="M100 0 L111 62 L162 21 L130 76 L192 70 L139 100 L192 130 L130 124 L162 179 L111 138 L100 200 L89 138 L38 179 L70 124 L8 130 L61 100 L8 70 L70 76 L38 21 L89 62Z"/></symbol>
+    <symbol id="boom" viewBox="0 0 200 100"><path style="fill:currentColor" d="M4 88 C40 10 120 -6 196 18 C140 22 92 42 60 92 Z"/></symbol>
+    <symbol id="fig" viewBox="0 0 200 240">
+      <path d="M18 240 L44 170 Q100 140 156 170 L182 240Z" style="fill:var(--ink)"/>
+      <rect x="86" y="128" width="28" height="34" style="fill:var(--paper);stroke:var(--ink);stroke-width:4"/>
+      <circle cx="100" cy="88" r="44" style="fill:var(--paper);stroke:var(--ink);stroke-width:4"/>
+      <circle cx="84" cy="88" r="5" style="fill:var(--ink)"/><circle cx="116" cy="88" r="5" style="fill:var(--ink)"/>
+      <path d="M84 110 Q100 120 116 110" style="fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round"/>
+    </symbol>
+    <symbol id="bust" viewBox="0 0 200 240">
+      <path d="M14 240c0-62 36-98 86-98s86 36 86 98z"/>
+      <rect x="84" y="112" width="32" height="40" rx="6"/>
+      <ellipse cx="100" cy="80" rx="40" ry="46"/>
+    </symbol>
+    <path id="ringTop" d="M30 100a70 70 0 0 1 140 0"/>
+    <path id="ringBot" d="M27 100a73 73 0 0 0 146 0"/>
+  </defs>
+</svg>
+<div class="draft"><div class="wrap"><b class="mono">Preview</b><span>Not public. Photos are placeholders until the shoot.</span></div></div>
+
+<header class="topnav"><div class="wrap"><a class="mark" href="index.html#top">RUDE BOYS</a>
+  <nav aria-label="Sections"><a href="index.html#audit">The audit</a><a href="index.html#steps">How it works</a><a href="index.html#work">Work</a><a href="#crew">Partners</a></nav>
+  <a class="cta" href="index.html#apply">Apply for the audit</a>
+</div></header>
+<main>
+<section class="crew" id="crew">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The partners</h2>
+      <p>Three partners, each with forms that grow from base to evolved. Pick a partner, then a form.</p>
+    </div>
+
+    <div class="binder" data-binder>
+      <div class="forms" role="tablist" aria-label="Partners">
+        <button class="form-tab" role="tab" id="tab-jove" aria-controls="p-jove" aria-selected="true" tabindex="0">
+          <span class="tab-face" aria-hidden="true"><em>4 forms</em><b>JS</b><i></i></span>
+          <span class="tab-label"><strong>Jove Schrottmann</strong><small>The Operator<br>Wellness to Evolution</small></span>
+        </button><button class="form-tab" role="tab" id="tab-andrew" aria-controls="p-andrew" aria-selected="false" tabindex="-1">
+          <span class="tab-face" aria-hidden="true"><em>3 forms</em><b>AM</b><i></i></span>
+          <span class="tab-label"><strong>Andrew Malarky</strong><small>The Chef<br>Kitchen to Festival</small></span>
+        </button><button class="form-tab" role="tab" id="tab-choi" aria-controls="p-choi" aria-selected="false" tabindex="-1">
+          <span class="tab-face" aria-hidden="true"><em>3 forms</em><b>CK</b><i></i></span>
+          <span class="tab-label"><strong>Choi Kapunan</strong><small>The Counsel<br>Counsel to Founder</small></span>
+        </button>
+      </div>
+      <div class="binder-panel" role="tabpanel" id="p-jove" aria-labelledby="tab-jove">
+      <p class="partner-line"><b>Jove Schrottmann, The Operator</b><span>Partner. Strategy, concepts and operating systems.</span></p>
+      <div class="binder" data-binder>
+        <div class="ftabs" role="tablist" aria-label="Jove Schrottmann forms">
+          <button class="ftab" role="tab" id="tab-jove-wellness" aria-controls="card-jove-wellness" aria-selected="true" tabindex="0">
+              <span class="fc-rarity" aria-hidden="true">R</span><span><strong>Wellness</strong><small>No. 001, Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-jove-hospitality" aria-controls="card-jove-hospitality" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">R</span><span><strong>Hospitality</strong><small>No. 002, Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-jove-blend" aria-controls="card-jove-blend" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">H</span><span><strong>Blend</strong><small>No. 003, Holo Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-jove-evolution" aria-controls="card-jove-evolution" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">M</span><span><strong>Evolution</strong><small>No. 004, Mythic Rare</small></span>
+            </button>
+        </div>
+        <div class="binder-panel" role="tabpanel" id="card-jove-wellness" aria-labelledby="tab-jove-wellness">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-rare pid-jove has-photo" style="--photo:url('photos/generated/web/001-jove-wellness.webp');--focus:34%" data-tilt aria-label="Jove Schrottmann, Wellness Form, trading card">
+              
+              <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Wellness Form, Wellness Operator</span><span class="fc-rarity" role="img" aria-label="Rare">R</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>TREEtments.</b> Plants one tree per treatment and per room night.</p>
+                <p class="fc-move"><b>Spa Floor Audit</b><span>90</span></p><p class="fc-move"><b>Award Season</b><span>120</span></p>
+                <p class="fc-flavour">“Your team isn&#x27;t the problem. The system is.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Burnout culture. Retreat: To the spa</span><span>Rude Boys 001/2026, Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 001, Wellness Form, Rare</dd>
+            <dt>Type</dt><dd>Wellness Operator</dd>
+            <dt>Record</dt><dd><ul><li>Managing Director, Mandala Spa and Resort Villas, Boracay</li><li>World Spa Awards, Philippines&#x27; Best Wellness Spa, 2015 and 2016 (Mandala)</li><li>TREEtments: one tree planted per treatment and per room night</li></ul></dd>
+            <dt>Ability</dt><dd>TREEtments. Plants one tree per treatment and per room night. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Spa Floor Audit</b><span>90</span></li><li><b>Award Season</b><span>120</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Your team isn&#x27;t the problem. The system is.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-jove-hospitality" aria-labelledby="tab-jove-hospitality">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-rare pid-jove has-photo" style="--photo:url('photos/generated/web/002-jove-hospitality.webp');--focus:37%" data-tilt aria-label="Jove Schrottmann, Hospitality Form, trading card">
+              
+              <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Hospitality Form, Hotelier</span><span class="fc-rarity" role="img" aria-label="Rare">R</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Floor Trained.</b> Has worked every post from front office to restaurant service.</p>
+                <p class="fc-move"><b>Front Desk to Boardroom</b><span>100</span></p><p class="fc-move"><b>Guest Is the Hero</b><span>110</span></p>
+                <p class="fc-flavour">“Say the number. If there is a figure, use it.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Vanity metrics. Retreat: To the front desk</span><span>Rude Boys 002/2026, Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 002, Hospitality Form, Rare</dd>
+            <dt>Type</dt><dd>Hotelier</dd>
+            <dt>Record</dt><dd><ul><li>Trained on the floor, front office to restaurant service</li><li>Hospitality school at IMI, Lucerne</li><li>World Travel Awards, Philippines&#x27; Leading Resort, 2010 and 2011 (Mandala)</li><li>CEO, The Rōnin and Wild, Siargao</li></ul></dd>
+            <dt>Ability</dt><dd>Floor Trained. Has worked every post from front office to restaurant service. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Front Desk to Boardroom</b><span>100</span></li><li><b>Guest Is the Hero</b><span>110</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Say the number. If there is a figure, use it.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-jove-blend" aria-labelledby="tab-jove-blend">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-holo pid-jove has-photo" style="--photo:url('photos/generated/web/003-jove-blend.webp');--focus:0%" data-tilt aria-label="Jove Schrottmann, Blend Form, trading card">
+              
+              <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Blend Form, Wellness Hotelier</span><span class="fc-rarity" role="img" aria-label="Holo Rare">H</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Guild Mode.</b> Turns a team into a guild that levels up on mastery, not tenure.</p>
+                <p class="fc-move"><b>Concept to Keys</b><span>140</span></p><p class="fc-move"><b>Island Build</b><span>130</span></p>
+                <p class="fc-flavour">“Nice concept. Now let&#x27;s make it make money.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Copy-paste concepts. Retreat: Never before close</span><span>Rude Boys 003/2026, Holo Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 003, Blend Form, Holo Rare</dd>
+            <dt>Type</dt><dd>Wellness Hotelier</dd>
+            <dt>Record</dt><dd><ul><li>Mandala: spa, resort villas, retreat and restaurant run as one brand</li><li>The Rōnin and Wild: adventure stays and progressive Filipino dining, staff levelled like a guild</li><li>Partner, Rude Boys: concepts, strategy and operating systems</li></ul></dd>
+            <dt>Ability</dt><dd>Guild Mode. Turns a team into a guild that levels up on mastery, not tenure. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Concept to Keys</b><span>140</span></li><li><b>Island Build</b><span>130</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Nice concept. Now let&#x27;s make it make money.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-jove-evolution" aria-labelledby="tab-jove-evolution">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-mythic pid-jove has-photo" style="--photo:url('photos/generated/web/004-jove-evolution.webp');--focus:0%" data-tilt aria-label="Jove Schrottmann, Evolution Form, trading card">
+              <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/></svg><span class="fc-ph">Portrait to shoot</span>
+              <header class="fc-name"><h3>Jove Schrottmann</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              
+              <div class="fc-type"><span>Evolution Form, Venture Builder</span><span class="fc-rarity" role="img" aria-label="Mythic Rare">M</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Evolve.</b> Takes the operating model off the island and into medicine and tech.</p>
+                <p class="fc-move"><b>Regenerative Leap</b><span>160</span></p><p class="fc-move"><b>Board Seat</b><span>150</span></p>
+                <p class="fc-flavour">“Rude to the rules. Good to the guest.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Slow paperwork. Retreat: To the next build</span><span>Rude Boys 004/2026, Mythic Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 004, Evolution Form, Mythic Rare</dd>
+            <dt>Type</dt><dd>Venture Builder</dd>
+            <dt>Record</dt><dd><ul><li>Raya Regenerative: regenerative medicine, Creative Director and CFO</li><li>Board seat, Dua Spirits</li><li>Shareholder, DOCONCHAIN. Early investor, Kumu</li></ul></dd>
+            <dt>Ability</dt><dd>Evolve. Takes the operating model off the island and into medicine and tech. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Regenerative Leap</b><span>160</span></li><li><b>Board Seat</b><span>150</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Rude to the rules. Good to the guest.”</i></dd>
+          </dl>
+        </div>
+      </div>
+      </div>
+    </div><div class="binder-panel" role="tabpanel" id="p-andrew" aria-labelledby="tab-andrew">
+      <p class="partner-line"><b>Andrew Malarky, The Chef</b><span>Partner. Culinary, kitchen operations and F&amp;B concepts.</span></p>
+      <div class="binder" data-binder>
+        <div class="ftabs" role="tablist" aria-label="Andrew Malarky forms">
+          <button class="ftab" role="tab" id="tab-andrew-kitchen" aria-controls="card-andrew-kitchen" aria-selected="true" tabindex="0">
+              <span class="fc-rarity" aria-hidden="true">R</span><span><strong>Kitchen</strong><small>No. 005, Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-andrew-island" aria-controls="card-andrew-island" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">H</span><span><strong>Island</strong><small>No. 006, Holo Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-andrew-festival" aria-controls="card-andrew-festival" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">M</span><span><strong>Festival</strong><small>No. 007, Mythic Rare</small></span>
+            </button>
+        </div>
+        <div class="binder-panel" role="tabpanel" id="card-andrew-kitchen" aria-labelledby="tab-andrew-kitchen">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-rare pid-andrew has-photo" style="--photo:url('photos/generated/web/005-andrew-kitchen.webp');--focus:37%" data-tilt aria-label="Andrew Malarky, Kitchen Form, trading card">
+              
+              <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Kitchen Form, Brigade Chef</span><span class="fc-rarity" role="img" aria-label="Rare">R</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Four Cities.</b> Trained in Toronto, cooked in Melbourne, Montreal and Manila.</p>
+                <p class="fc-move"><b>Mise en Place</b><span>90</span></p><p class="fc-move"><b>Thirteen-Year Service</b><span>120</span></p>
+                <p class="fc-flavour">“Boracay gave me foundation, but Siargao gives me freedom.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Shortcuts. Retreat: To the walk-in</span><span>Rude Boys 005/2026, Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 005, Kitchen Form, Rare</dd>
+            <dt>Type</dt><dd>Brigade Chef</dd>
+            <dt>Record</dt><dd><ul><li>George Brown Culinary Academy, Toronto</li><li>Hilton Suites, Oro, Valdez and Cluny Bistro</li><li>13 years at Dos Mestizos, Boracay</li></ul></dd>
+            <dt>Ability</dt><dd>Four Cities. Trained in Toronto, cooked in Melbourne, Montreal and Manila. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Mise en Place</b><span>90</span></li><li><b>Thirteen-Year Service</b><span>120</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Boracay gave me foundation, but Siargao gives me freedom.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-andrew-island" aria-labelledby="tab-andrew-island">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-holo pid-andrew has-photo" style="--photo:url('photos/generated/web/006-andrew-island.webp');--focus:0%" data-tilt aria-label="Andrew Malarky, Island Form, trading card">
+              
+              <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Island Form, Glocal Chef</span><span class="fc-rarity" role="img" aria-label="Holo Rare">H</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Glocal.</b> Global method, Siargao produce.</p>
+                <p class="fc-move"><b>Pass Control</b><span>130</span></p><p class="fc-move"><b>Kitchen Takeover</b><span>120</span></p>
+                <p class="fc-flavour">“Don&#x27;t just learn the how, understand the why.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Imported shortcuts. Retreat: To the pass</span><span>Rude Boys 006/2026, Holo Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 006, Island Form, Holo Rare</dd>
+            <dt>Type</dt><dd>Glocal Chef</dd>
+            <dt>Record</dt><dd><ul><li>Executive Chef and COO, Wild Siargao, Popolo Pizzeria and Bayani Siargao</li><li>Octopus carpaccio. Shrimp patty on a sugarcane skewer with laing purée</li><li>Pandemic Kitchen Takeovers at Wild kept other local kitchens open</li></ul></dd>
+            <dt>Ability</dt><dd>Glocal. Global method, Siargao produce. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Pass Control</b><span>130</span></li><li><b>Kitchen Takeover</b><span>120</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Don&#x27;t just learn the how, understand the why.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-andrew-festival" aria-labelledby="tab-andrew-festival">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-mythic pid-andrew has-photo" style="--photo:url('photos/generated/web/007-andrew-festival.webp');--focus:0%" data-tilt aria-label="Andrew Malarky, Festival Form, trading card">
+              <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/><path d="M62 52c-14-2-20-22-6-30 4-16 26-18 32-6 8-12 30-10 34 4 16 0 22 22 6 30l-2 10H64z" style="fill:var(--sheet);stroke:var(--ink)" stroke-width="4"/></svg><span class="fc-ph">Portrait to shoot</span>
+              <header class="fc-name"><h3>Andrew Malarky</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              
+              <div class="fc-type"><span>Festival Form, Festival Director</span><span class="fc-rarity" role="img" aria-label="Mythic Rare">M</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Open the Island.</b> Brings the region&#x27;s cooks to one table in Siargao.</p>
+                <p class="fc-move"><b>Gala at Wild</b><span>150</span></p><p class="fc-move"><b>Festival Founder</b><span>160</span></p>
+                <p class="fc-flavour">“Culture comes before money.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Rain on the gala. Retreat: After the last plate</span><span>Rude Boys 007/2026, Mythic Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 007, Festival Form, Mythic Rare</dd>
+            <dt>Type</dt><dd>Festival Director</dd>
+            <dt>Record</dt><dd><ul><li>Founder and festival director, Siargao Food and Wine Festival</li><li>2026 edition covered by Tatler Asia, opened with a gala at Wild</li><li>Speaker, Ubud Food Festival. Cooked at the Cebu and Davao Food and Wine Festivals</li></ul></dd>
+            <dt>Ability</dt><dd>Open the Island. Brings the region&#x27;s cooks to one table in Siargao. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Gala at Wild</b><span>150</span></li><li><b>Festival Founder</b><span>160</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Culture comes before money.”</i></dd>
+          </dl>
+        </div>
+      </div>
+      </div>
+    </div><div class="binder-panel" role="tabpanel" id="p-choi" aria-labelledby="tab-choi">
+      <p class="partner-line"><b>Choi Kapunan, The Counsel</b><span>Partner. Legal and corporate.</span></p>
+      <div class="binder" data-binder>
+        <div class="ftabs" role="tablist" aria-label="Choi Kapunan forms">
+          <button class="ftab" role="tab" id="tab-choi-counsel" aria-controls="card-choi-counsel" aria-selected="true" tabindex="0">
+              <span class="fc-rarity" aria-hidden="true">R</span><span><strong>Counsel</strong><small>No. 008, Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-choi-coffee" aria-controls="card-choi-coffee" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">H</span><span><strong>Coffee</strong><small>No. 009, Holo Rare</small></span>
+            </button><span class="arrow" aria-hidden="true">›</span><button class="ftab" role="tab" id="tab-choi-founder" aria-controls="card-choi-founder" aria-selected="false" tabindex="-1">
+              <span class="fc-rarity" aria-hidden="true">M</span><span><strong>Founder</strong><small>No. 010, Mythic Rare</small></span>
+            </button>
+        </div>
+        <div class="binder-panel" role="tabpanel" id="card-choi-counsel" aria-labelledby="tab-choi-counsel">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-rare pid-choi has-photo" style="--photo:url('photos/generated/web/008-choi-counsel.webp');--focus:30%" data-tilt aria-label="Choi Kapunan, Counsel Form, trading card">
+              
+              <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--figure)"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Counsel Form, Lawyer</span><span class="fc-rarity" role="img" aria-label="Rare">R</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Clean Papers.</b> Every deal signed and sound.</p>
+                <p class="fc-move"><b>Contract Stack</b><span>110</span></p><p class="fc-move"><b>Permit Run</b><span>100</span></p>
+                <p class="fc-flavour">“We say it straight.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Fine print. Retreat: To chambers</span><span>Rude Boys 008/2026, Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 008, Counsel Form, Rare</dd>
+            <dt>Type</dt><dd>Lawyer</dd>
+            <dt>Record</dt><dd><ul><li>Atty. Ceasario Rex “Choi” Kapunan, KMT Law</li><li>Counsel on the Siargao Food and Wine Festival&#x27;s 2025 permit work with the Department of Tourism</li></ul></dd>
+            <dt>Ability</dt><dd>Clean Papers. Every deal signed and sound. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Contract Stack</b><span>110</span></li><li><b>Permit Run</b><span>100</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“We say it straight.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-choi-coffee" aria-labelledby="tab-choi-coffee">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-holo pid-choi has-photo" style="--photo:url('photos/generated/web/009-choi-coffee.webp');--focus:0%" data-tilt aria-label="Choi Kapunan, Coffee Form, trading card">
+              
+              <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              <figure class="fc-art"><svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMax meet" width="100%" height="100%" aria-hidden="true" style="fill:var(--ink)"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span></figure>
+              <div class="fc-type"><span>Coffee Form, Coffee Advocate</span><span class="fc-rarity" role="img" aria-label="Holo Rare">H</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Fair Cup.</b> Fair prices for local farmers. More Filipinos drinking Philippine coffee.</p>
+                <p class="fc-move"><b>Board Address</b><span>120</span></p><p class="fc-move"><b>Chief Extraction</b><span>130</span></p>
+                <p class="fc-flavour">“Drink what our farmers grow.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Instant coffee. Retreat: To the roaster</span><span>Rude Boys 009/2026, Holo Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 009, Coffee Form, Holo Rare</dd>
+            <dt>Type</dt><dd>Coffee Advocate</dd>
+            <dt>Record</dt><dd><ul><li>Director, spokesperson and PR officer, Philippine Coffee Board</li><li>Quoted as PCBI Director in the Inquirer and The Manila Times, October 2026</li><li>Chief Extraction Officer, Common Folk coffee bar, Katipunan</li><li>About ten years in coffee as a café owner and roaster</li></ul></dd>
+            <dt>Ability</dt><dd>Fair Cup. Fair prices for local farmers. More Filipinos drinking Philippine coffee. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Board Address</b><span>120</span></li><li><b>Chief Extraction</b><span>130</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Drink what our farmers grow.”</i></dd>
+          </dl>
+        </div>
+      </div><div class="binder-panel" role="tabpanel" id="card-choi-founder" aria-labelledby="tab-choi-founder">
+        <div class="mtg">
+          <div class="mtg-stage"><div class="flip">
+            <article class="fc fc-mythic pid-choi has-photo" style="--photo:url('photos/generated/web/010-choi-founder.webp');--focus:0%" data-tilt aria-label="Choi Kapunan, Founder Form, trading card">
+              <div class="fc-bg" aria-hidden="true"></div><svg class="fc-pop" viewBox="0 0 200 240" aria-hidden="true" style="fill:var(--paper);stroke:var(--ink)" stroke-width="3"><use href="#fig"/><path d="M92 162h16l6 14-14 60-14-60z" style="fill:var(--id);stroke:var(--ink);stroke-width:3"/></svg><span class="fc-ph">Portrait to shoot</span>
+              <header class="fc-name"><h3>Choi Kapunan</h3><span class="lz" aria-hidden="true"><i></i><i class="k"></i><i class="p"></i></span></header>
+              
+              <div class="fc-type"><span>Founder Form, Builder</span><span class="fc-rarity" role="img" aria-label="Mythic Rare">M</span></div>
+              <div class="fc-text">
+                <p><span class="fc-tag">Ability</span> <b>Build It Right.</b> Starts businesses with friends and keeps them clean on paper.</p>
+                <p class="fc-move"><b>Burnside Cut</b><span>120</span></p><p class="fc-move"><b>Common Folk</b><span>150</span></p>
+                <p class="fc-flavour">“Hospitality, without the fluff.”</p>
+              </div>
+              <footer class="fc-foot"><span>Weakness: Handshake deals. Retreat: Never unsigned</span><span>Rude Boys 010/2026, Mythic Rare</span></footer>
+            </article>
+            <div class="card-back" aria-hidden="true"><svg viewBox="0 0 200 200" class="seal"><use href="#sealArt"/></svg></div>
+          </div></div>
+          <dl class="fields">
+            <dt>Card</dt><dd>No. 010, Founder Form, Mythic Rare</dd>
+            <dt>Type</dt><dd>Builder</dd>
+            <dt>Record</dt><dd><ul><li>Co-founded Burnside Barber, Quezon City, with high school classmates</li><li>Common Folk Group of Companies</li><li>Partner and counsel, Rude Boys</li></ul></dd>
+            <dt>Ability</dt><dd>Build It Right. Starts businesses with friends and keeps them clean on paper. </dd>
+            <dt>Moves</dt><dd><ul class="tcg-moves"><li><b>Burnside Cut</b><span>120</span></li><li><b>Common Folk</b><span>150</span></li></ul> </dd>
+            <dt>Flavour</dt><dd><i>“Hospitality, without the fluff.”</i></dd>
+          </dl>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div><div class="set"><h3 class="set-head">The full set. <span>Ten cards, three partners.</span></h3>
+      <ol class="set-grid"><li><button class="set-card set-rare pid-jove" type="button" data-p="jove" data-f="wellness" style="--photo:url('photos/generated/web/001-jove-wellness.webp');--focus:34%" aria-label="Show card 001: Jove Schrottmann, Wellness Form, Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 001</b><strong>Wellness</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-rare pid-jove" type="button" data-p="jove" data-f="hospitality" style="--photo:url('photos/generated/web/002-jove-hospitality.webp');--focus:37%" aria-label="Show card 002: Jove Schrottmann, Hospitality Form, Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 002</b><strong>Hospitality</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-holo pid-jove" type="button" data-p="jove" data-f="blend" style="--photo:url('photos/generated/web/003-jove-blend.webp');--focus:0%" aria-label="Show card 003: Jove Schrottmann, Blend Form, Holo Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 003</b><strong>Blend</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-mythic pid-jove" type="button" data-p="jove" data-f="evolution" style="--photo:url('photos/generated/web/004-jove-evolution.webp');--focus:0%" aria-label="Show card 004: Jove Schrottmann, Evolution Form, Mythic Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 004</b><strong>Evolution</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-rare pid-andrew" type="button" data-p="andrew" data-f="kitchen" style="--photo:url('photos/generated/web/005-andrew-kitchen.webp');--focus:37%" aria-label="Show card 005: Andrew Malarky, Kitchen Form, Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 005</b><strong>Kitchen</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-holo pid-andrew" type="button" data-p="andrew" data-f="island" style="--photo:url('photos/generated/web/006-andrew-island.webp');--focus:0%" aria-label="Show card 006: Andrew Malarky, Island Form, Holo Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 006</b><strong>Island</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-mythic pid-andrew" type="button" data-p="andrew" data-f="festival" style="--photo:url('photos/generated/web/007-andrew-festival.webp');--focus:0%" aria-label="Show card 007: Andrew Malarky, Festival Form, Mythic Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 007</b><strong>Festival</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-rare pid-choi" type="button" data-p="choi" data-f="counsel" style="--photo:url('photos/generated/web/008-choi-counsel.webp');--focus:30%" aria-label="Show card 008: Choi Kapunan, Counsel Form, Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 008</b><strong>Counsel</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-holo pid-choi" type="button" data-p="choi" data-f="coffee" style="--photo:url('photos/generated/web/009-choi-coffee.webp');--focus:0%" aria-label="Show card 009: Choi Kapunan, Coffee Form, Holo Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 009</b><strong>Coffee</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li><li><button class="set-card set-mythic pid-choi" type="button" data-p="choi" data-f="founder" style="--photo:url('photos/generated/web/010-choi-founder.webp');--focus:0%" aria-label="Show card 010: Choi Kapunan, Founder Form, Mythic Rare">
+          <span class="set-art" aria-hidden="true"></span>
+          <span class="set-meta"><span><b>No. 010</b><strong>Founder</strong></span><span class="fc-rarity" aria-hidden="true"></span></span>
+        </button></li></ol></div>
+  </div>
+</section>
+<section class="band ink" id="story">
+  <div class="wrap story">
+    <div>
+      <h2><s>Nice Guys</s><br>Rude Boys</h2>
+      <img class="story-art" src="photos/generated/sections/web/06-turn.webp" alt="Illustration: three partners walk out of a corporate boardroom into island light" width="760" height="947" loading="lazy" decoding="async">
+      <svg viewBox="0 0 200 200" class="seal" role="img" aria-label="RB seal"><use href="#sealArt"/></svg>
+    </div>
+    <div class="body">
+      <p class="bigidea">Rude to the rules. Good to the guest.</p>
+      <p>We started as a consulting and management firm called Nice Guys.</p>
+      <p>After a few projects we learned that people don’t respect nice. Owners nodded, then did it the old way. So we formed a new company and gave it a name that says what we do.</p>
+      <p>Rude to vanity metrics, tenure-based promotion, copy-paste concepts and fluff. Never rude to guests, teams, partners or local culture.</p>
+    </div>
+  </div>
+</section>
+<section class="band" id="serve">
+  <div class="wrap">
+    <div class="sec-head"><h2>Who we build for</h2></div>
+    <div class="serve">
+      <article><img class="serve-art" src="photos/generated/sections/web/05-hotels.webp" alt="Illustration: a porter crosses an open-air island resort lobby at golden hour" width="760" height="1017" loading="lazy" decoding="async"><h3>Hotels and resorts</h3><p>Feasibility, operator selection, pre-opening and the team that runs it.</p><a class="backlink" href="index.html#apply">Apply for the audit</a></article>
+      <article><img class="serve-art" src="photos/generated/sections/web/05-restaurants.webp" alt="Illustration: a chef plates on the pass while the bar behind is in full service" width="760" height="1017" loading="lazy" decoding="async"><h3>Restaurants, bars and clubs</h3><p>Concept, menu, kitchen design and the crew on the pass.</p><a class="backlink" href="index.html#apply">Apply for the audit</a></article>
+      <article><img class="serve-art" src="photos/generated/sections/web/05-spas.webp" alt="Illustration: a therapist lights a candle in a garden treatment pavilion" width="760" height="1017" loading="lazy" decoding="async"><h3>Spas and wellness</h3><p>Spa design management and the standards that hold after opening.</p><a class="backlink" href="index.html#apply">Apply for the audit</a></article>
+    </div>
+    <p class="serve-foot">Opening your first venue? We guide first-time founders through all of it.</p>
+  </div>
+</section>
+<section class="band" id="writing">
+  <div class="wrap">
+    <div class="sec-head"><h2>Field notes</h2><p>Written between services. Proposed issues, not yet written.</p></div>
+    <div class="issues"><article class="issue lead" data-topic="story"><div><h3>Why we stopped being nice</h3><span class="meta"><b>No. 01</b><span>Story</span><span class="dchip">To write</span></span></div><div><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></div><img class="issue-cover" src="photos/generated/sections/web/fn01.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"></article></div>
+    <p class="teaser-foot"><a class="backlink" href="#field-notes">All field notes</a></p>
+  </div>
+</section>
+<section class="band" id="field-notes" aria-label="Field notes, back issues">
+  <div class="wrap">
+    <div class="notes-head">
+      <nav class="crumb" aria-label="Breadcrumb"><a href="index.html#top">Front page</a> › Field notes</nav>
+      <h1>Notes from the pass</h1>
+      <p>What we learn running our own venues, written down for owners. Every issue below is a proposed topic: nothing is published until a partner writes it, with real numbers.</p>
+    </div>
+    <div class="chips" role="group" aria-label="Filter by topic"><button type="button" data-filter="all" aria-pressed="true">All<sup>6</sup></button><button type="button" data-filter="story" aria-pressed="false">Story<sup>1</sup></button><button type="button" data-filter="operations" aria-pressed="false">Operations<sup>1</sup></button><button type="button" data-filter="kitchen" aria-pressed="false">Kitchen<sup>2</sup></button><button type="button" data-filter="island" aria-pressed="false">Island<sup>1</sup></button><button type="button" data-filter="legal" aria-pressed="false">Legal<sup>1</sup></button></div>
+    <div class="issues" id="issue-list"><article class="issue lead" data-topic="story"><div><h2>Why we stopped being nice</h2><span class="meta"><b>Lead story, No. 01</b><span>Story</span><span class="dchip">To write</span></span></div><div><p>We ran a firm called Nice Guys. Owners nodded, then did it the old way. What changed when we changed the name.</p><span class="by">By Jove Schrottmann</span></div><img class="issue-cover" src="photos/generated/sections/web/fn01.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"></article>
+<article class="issue" data-topic="operations"><img class="issue-cover" src="photos/generated/sections/web/fn02.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Promotion by mastery, not tenure</h2><span class="meta"><b>No. 02</b><span>Operations</span><span class="dchip">To write</span></span><p>How the crew at The Rōnin and Wild levels up like a guild, and why years served is not a skill.</p><span class="by">By Jove Schrottmann</span></article>
+<article class="issue" data-topic="kitchen"><img class="issue-cover" src="photos/generated/sections/web/fn03.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Glocal: global method, Siargao produce</h2><span class="meta"><b>No. 03</b><span>Kitchen</span><span class="dchip">To write</span></span><p>Why the menu at Wild starts at the market, not the import list.</p><span class="by">By Andrew Malarky</span></article>
+<article class="issue" data-topic="island"><img class="issue-cover" src="photos/generated/sections/web/fn04.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>An island is not a city</h2><span class="meta"><b>No. 04</b><span>Island</span><span class="dchip">To write</span></span><p>Crowds, construction, hiring and branding all change offshore. What we budget for that city consultants miss.</p><span class="by">By Jove Schrottmann and Andrew Malarky</span></article>
+<article class="issue" data-topic="kitchen"><img class="issue-cover" src="photos/generated/sections/web/fn05.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>The Kitchen Takeovers</h2><span class="meta"><b>No. 05</b><span>Kitchen</span><span class="dchip">To write</span></span><p>How Wild handed its kitchen to other local cooks during the pandemic, and what the team learned from it.</p><span class="by">By Andrew Malarky</span></article>
+<article class="issue" data-topic="legal"><img class="issue-cover" src="photos/generated/sections/web/fn06.webp" alt="" width="760" height="1009" loading="lazy" decoding="async"><h2>Papers before the party</h2><span class="meta"><b>No. 06</b><span>Legal</span><span class="dchip">To write</span></span><p>What a festival needs from the Department of Tourism before the first plate goes out.</p><span class="by">By Choi Kapunan</span></article></div>
+  </div>
+</section>
+</main>
+<footer class="foot2">
+  <div class="wrap">
+    <div class="fcols">
+      <div><svg viewBox="0 0 200 200" class="seal" role="img" aria-label="RB seal"><use href="#sealArt"/></svg><p>Rude Boys Hospitality. Operators who build hotels, restaurants and spas on the Philippine islands.</p></div>
+      <div><b>Services</b><ul><li><a href="index.html#steps">Feasibility and contracting</a></li><li><a href="index.html#steps">Design and planning</a></li><li><a href="index.html#steps">Construction and pre-opening</a></li><li><a href="index.html#steps">Operations</a></li></ul></div>
+      <div><b>Who we build for</b><ul><li><a href="#serve">Hotels and resorts</a></li><li><a href="#serve">Restaurants, bars and clubs</a></li><li><a href="#serve">Spas and wellness</a></li><li><a href="#serve">First-time founders</a></li></ul></div>
+      <div><b>Company</b><ul><li><a href="#crew">Partners</a></li><li><a href="index.html#northstar">Northstar method</a></li><li><a href="#story">Name story</a></li><li><a href="#field-notes">Field notes</a></li><li><a href="index.html#apply">Apply</a></li></ul></div>
+    </div>
+    <p class="legal">Rude Boys Consultancy Inc.<br>Philippines<br>Our venues keep their own names, with a small Run by Rude Boys line.</p>
+  </div>
+</footer>
+
+<!-- ring seal art, paper on ink (the approved FORMERLY NICE GUYS line is on hold, so the ring reads PHILIPPINES) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sealArt" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="94" fill="none" style="stroke:var(--paper)" stroke-width="6"/>
+    <circle cx="100" cy="100" r="56" fill="none" style="stroke:var(--paper)" stroke-width="3"/>
+    <text font-size="17" style="fill:var(--paper)" letter-spacing="1.2" font-family="'Big Shoulders Display',Impact,sans-serif" font-weight="800"><textPath href="#ringTop" startOffset="50%" text-anchor="middle">RUDE BOYS CONSULTANCY INC.</textPath></text>
+    <text font-size="17" style="fill:var(--paper)" letter-spacing="3" font-family="'Big Shoulders Display',Impact,sans-serif" font-weight="800" dominant-baseline="hanging"><textPath href="#ringBot" startOffset="50%" text-anchor="middle">PHILIPPINES</textPath></text>
+    <rect x="16" y="94" width="11" height="11" style="fill:var(--red)" transform="rotate(45 21.5 99.5)"/>
+    <rect x="173" y="94" width="11" height="11" style="fill:var(--red)" transform="rotate(45 178.5 99.5)"/>
+    <text x="100" y="122" text-anchor="middle" font-size="62" style="fill:var(--paper)" font-family="'Big Shoulders Display',Impact,sans-serif" font-weight="900">RB</text>
+  </symbol>
+</svg>
+
+<script>
+document.getElementById('copy')?.addEventListener('click', function () {
+  var btn = this, el = document.getElementById('email');
+  function done(m){ btn.textContent = m; setTimeout(function(){ btn.textContent = 'Copy address'; }, 1800); }
+  function selectIt(){ var r = document.createRange(); r.selectNodeContents(el); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); done('Selected'); }
+  try { navigator.clipboard.writeText(el.textContent).then(function(){ done('Copied'); }, selectIt); } catch (err) { selectIt(); }
+});
+</script>
+<script>
+/* field notes: topic filter */
+document.querySelectorAll('.chips button').forEach(function (b, _, all) {
+  b.addEventListener('click', function () {
+    var f = b.dataset.filter;
+    all.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    document.querySelectorAll('#issue-list .issue').forEach(function (i) { i.hidden = f !== 'all' && i.dataset.topic !== f; });
+  });
+});
+/* field notes view: in-page links and the hash both switch it; CSS :target covers no-JS */
+function setView(notes){ document.body.classList.toggle('notes', notes); if (notes) window.scrollTo(0, 0); }
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="#"]'); if (a) setView(a.getAttribute('href') === '#field-notes');
+});
+window.addEventListener('hashchange', function () { setView(location.hash === '#field-notes'); });
+setView(location.hash === '#field-notes');
+</script>
+<script>
+/* card binder: tabs (click, tap, arrow keys, Home/End). Without this script every panel stays visible. */
+document.querySelectorAll('[data-binder]').forEach(function (binder) {
+  /* only this binder's own tabs: partner binders hold a nested form binder */
+  var list = binder.querySelector(':scope > [role="tablist"]');
+  var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches, first = true;
+  function show(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab, panel = document.getElementById(t.getAttribute('aria-controls'));
+      t.setAttribute('aria-selected', on ? 'true' : 'false'); t.tabIndex = on ? 0 : -1;
+      if (!panel) return;
+      var was = panel.hidden; panel.hidden = !on;
+      var flip = panel.querySelector('[role="tabpanel"]:not([hidden]) .flip') || panel.querySelector('.flip');
+      if (on && was && flip && flip.resetFlip) flip.resetFlip();
+      if (on && was && !first && !calm && flip) { flip.classList.remove('flip-in'); void flip.offsetWidth; flip.classList.add('flip-in'); }
+    });
+    first = false;
+    if (focus) tab.focus();
+    window.dispatchEvent(new Event('scroll'));
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(t); });
+    t.addEventListener('keydown', function (e) {
+      var j = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
+      if (j === undefined) return;
+      e.preventDefault(); show(tabs[(j + tabs.length) % tabs.length], true);
+    });
+  });
+  show(tabs.filter(function (t) { return t.getAttribute('aria-selected') === 'true'; })[0] || tabs[0]);
+});
+
+/* full set: a small card opens its partner and form in the binder, then scrolls to the big card */
+document.querySelectorAll('.set-card').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var id = b.dataset.p + '-' + b.dataset.f;
+    document.getElementById('tab-' + b.dataset.p).click();
+    document.getElementById('tab-' + id).click();
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelector('#card-' + id + ' .mtg-stage').scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'center' });
+  });
+});
+
+/* tap or click a card to see its back; the button under it does the same for keyboards.
+   A drag (touch tilt) of more than 8px is not a tap. */
+document.querySelectorAll('.flip').forEach(function (flip) {
+  var btn = document.createElement('button'), back = false, x0 = 0, y0 = 0;
+  btn.type = 'button'; btn.className = 'flip-btn'; btn.setAttribute('aria-pressed', 'false');
+  btn.textContent = 'Flip the card';
+  flip.after(btn);
+  function turn(toBack) {
+    back = toBack; btn.setAttribute('aria-pressed', String(back));
+    flip.classList.remove('flip-in', 'to-back', 'to-front'); void flip.offsetWidth;
+    flip.classList.add(back ? 'to-back' : 'to-front');
+  }
+  flip.resetFlip = function () { back = false; btn.setAttribute('aria-pressed', 'false'); flip.classList.remove('to-back', 'to-front'); };
+  flip.addEventListener('pointerdown', function (e) { x0 = e.clientX; y0 = e.clientY; });
+  flip.addEventListener('click', function (e) {
+    if (Math.abs(e.clientX - x0) > 8 || Math.abs(e.clientY - y0) > 8) return;
+    turn(!back);
+  });
+  btn.addEventListener('click', function () { turn(!back); });
+  flip.querySelector('article').addEventListener('animationend', function (e) {
+    if (e.animationName === 'edge-in') flip.classList.remove('to-front');
+  });
+});
+
+/* tilt + holo shine + moving red shadow. Mouse follows the pointer; touch: sideways drag tilts,
+   scroll position drives tilt on hover-less screens. Reduced motion: still card. */
+document.querySelectorAll('[data-tilt]').forEach(function (card) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var dragging = false, ticking = false;
+  function set(rx, ry, gx) {
+    card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+    card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+    card.style.setProperty('--gx', gx.toFixed(1) + '%');
+    card.style.setProperty('--sx', (12 - ry * 0.9).toFixed(1) + 'px');
+    card.style.setProperty('--sy', (12 + rx * 0.9).toFixed(1) + 'px');
+    card.style.setProperty('--px', ry.toFixed(2));
+    card.style.setProperty('--py', rx.toFixed(2));
+  }
+  function fromPoint(x, y) {
+    var r = card.getBoundingClientRect(), px = (x - r.left) / r.width, py = (y - r.top) / r.height;
+    px = Math.min(1, Math.max(0, px)); py = Math.min(1, Math.max(0, py));
+    set((0.5 - py) * 14, (px - 0.5) * 14, px * 100);
+  }
+  card.addEventListener('pointermove', function (e) {
+    if (e.pointerType === 'mouse') { card.classList.add('is-live'); fromPoint(e.clientX, e.clientY); }
+    else if (dragging) { fromPoint(e.clientX, e.clientY); }
+  });
+  card.addEventListener('pointerleave', function (e) {
+    if (e.pointerType === 'mouse') { card.classList.remove('is-live'); set(0, 0, 50); }
+  });
+  card.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'mouse') return;
+    dragging = true; card.classList.add('is-live', 'is-touch'); fromPoint(e.clientX, e.clientY);
+  });
+  function release() { if (!dragging) return; dragging = false; card.classList.remove('is-touch'); onScroll(); }
+  card.addEventListener('pointerup', release);
+  card.addEventListener('pointercancel', release);
+  if (!window.matchMedia('(hover: none)').matches) return;
+  function update() {
+    ticking = false;
+    if (dragging) return;
+    var r = card.getBoundingClientRect(), vh = window.innerHeight;
+    if (r.bottom < 0 || r.top > vh || r.height === 0) { card.classList.remove('is-live'); return; }
+    var p = (r.top + r.height / 2) / vh;
+    p = Math.min(1.2, Math.max(-0.2, p));
+    card.classList.add('is-live');
+    set((p - 0.5) * 16, (0.5 - p) * 6, (1 - p) * 100);
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+});
+</script>
+
+</body>
+</html>
